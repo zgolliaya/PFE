@@ -2,7 +2,7 @@ pipeline {
     properties([
             parameters([
                     choice(choices: ['test','staging'], description: 'Environment to run the tests against', name: 'environment'),
-                    string(name: 'INCLUDE', defaultValue: 'login.robot', description: 'Specify which tags you want to run (e.g. valid_login)'),
+                    string(name: 'INCLUDE', defaultValue: 'valid_loginORinvalid_login', description: 'Specify which tags you want to run (e.g. valid_login)'),
                     string(name: 'EXCLUDE', description: 'Specify if you want to exclude tests by category tags'),
                     string(name: 'FOLDER', defaultValue: 'test1', description: 'Specify the folder for tests (e.g. . for current dir'),
                     string(name: 'BRANCH', defaultValue: 'B2B', description: 'Specify the branch for tests (e.g. main')
