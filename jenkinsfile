@@ -19,12 +19,6 @@ pipeline {
                 sh 'robot ./test1/APItest.robot'
             }
             
-            post {
-                always {
-                    // Publish Robot Framework test results
-                    robot './test1/APItest.robot/output.xml'
-                }
-            }
         }
     }
 }
