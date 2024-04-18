@@ -2,42 +2,32 @@ pipeline {
     agent any
     
     stages {
+        stage('Checkout') {
+            steps {
+                // Checkout the code from the B2B branch
+                checkout([$class: 'GitSCM', branches: [[name: '*/B2B']], userRemoteConfigs: [[url: 'https://github.com/zgolliaya/PFE.git']]])
+            }
+        }
+        
         stage('Build') {
             steps {
+                // Build your project here
                 sh 'mvn clean install'
             }
         }
-        stage('Test') {
+        
+        stage('Run Tests') {
             steps {
+                // Run your tests here
                 sh 'mvn test'
             }
-        }
-        stage('Deploy') {
-            steps {
-                sh 'mvn deploy'
-            }
-        }
-    }
-    
-    post {
-        always {
-            echo 'Pipeline terminé.'
-        }
-        success {
-            echo 'Pipeline réussi. Félicitations !'
-            script {
-                if (env.BRANCH_NAME == 'B2B') {
-                    echo 'Tests exécutés avec succès sur la branche B2B.'
-                    currentBuild.result = 'SUCCESS'
-                    // Faire la fusion (merge) si les tests réussissent sur la branche B2B
-                    sh 'git checkout master'
-                    sh 'git merge B2B'
-                    sh 'git push origin master'
+            
+            post {
+                always {
+                    // Publish JUnit test results
+                    junit '**/target/surefire-reports/*.xml'
                 }
             }
-        }
-        failure {
-            echo 'Pipeline échoué. Veuillez vérifier les logs pour plus de détails.'
         }
     }
 }
