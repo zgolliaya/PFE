@@ -9,23 +9,20 @@ pipeline {
             }
         }
         
-        stage('Build') {
+        stage('Run Robot Framework Tests') {
             steps {
-                // Build your project here
-                sh 'mvn clean install'
-            }
-        }
-        
-        stage('Run Tests') {
-            steps {
-                // Run your tests here
-                sh 'mvn test'
+                // Install Robot Framework and required libraries
+                sh 'pip install robotframework'
+                sh 'pip install robotframework-seleniumlibrary' // Example library, install necessary libraries as per your test requirements
+                
+                // Run Robot Framework tests
+                sh 'robot ./test1/APItest.robot'
             }
             
             post {
                 always {
-                    // Publish JUnit test results
-                    junit '**/target/surefire-reports/*.xml'
+                    // Publish Robot Framework test results
+                    robot './test1/APItest.robot/output.xml'
                 }
             }
         }
