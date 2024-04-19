@@ -8,16 +8,11 @@ pipeline {
             }
         }
         
-        stage('Build') {
-            steps {
-                sh 'pip install -r requirements.txt'
-                 sh 'pip install robotframework'
-            }
-        }
         
-        stage('Test') {
+        stage('Run Tests') {
             steps {
-                sh 'robot ./test1/APItest.robot'
+                sh ' python -m robot  D:/PFE/test1/APItest.robot'
+                
             }
         }
     }
