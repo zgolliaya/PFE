@@ -4,7 +4,7 @@ pipeline {
     stages {
         stage('Checkout') {
             steps {
-                 checkout([$class: 'GitSCM', branches: [[name: '*/B2B']], credentialsId: '8c36c64d-43f3-43ec-832d-50ceb7836e55', userRemoteConfigs: [[url: 'https://github.com/zgolliaya/PFE.git']]])
+                   git branch: 'B2B', url: 'https://github.com/votre-utilisateur/votre-projet.git'
             }
         }
         
