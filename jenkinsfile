@@ -1,20 +1,38 @@
 pipeline {
-        agent any
-
-        stages {
-            stage('Build') {
-                steps {
-                    echo 'Build starting...'
-                    git url: "https://github.com/zgolliaya/PFE.git"
-                    sh(script:"pip3 install robotframework")
-                    sh(script:"pip3 install robotframework-requests")
-                }
+    agent any
+    
+    stages {
+        stage('Checkout') {
+            steps {
+                git branch: 'B2B', url: 'https://github.com/zgolliaya/PFE.git'
             }
-            stage('Test') {
-                steps {
-                    echo 'Test starting...'
-                    sh(script:"robot -d ./test1/APItest.robot")
-                }
+        }
+        
+        stage('Build') {
+            steps {
+                sh 'pip install -r requirements.txt'
+                 sh 'pip install robotframework'
+            }
+        }
+        
+        stage('Test') {
+            steps {
+                sh 'robot ./test1/APItest.robot'
             }
         }
     }
+    
+    post {
+        success {
+            emailext body: 'Le pipeline a réussi !', subject: 'Pipeline réussi', to: 'zgolliaya2000@gmail.com'
+        }
+        
+        failure {
+            emailext body: 'Le pipeline a échoué !', subject: 'Pipeline échoué', to: 'zgolliaya2000@gmail.com'
+        }
+        
+        unstable {
+            emailext body: 'Le pipeline est instable !', subject: 'Pipeline instable', to: 'zgolliaya2000@gmail.com'
+        }
+    }
+}
