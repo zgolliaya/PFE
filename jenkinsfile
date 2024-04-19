@@ -11,7 +11,8 @@ pipeline {
         
         stage('Run Tests') {
             steps {
-                sh 'robot ./test1/APItest.robot'
+               sh 'pip install robotframework'
+               sh 'robot ./test1/APItest.robot'
                 
             }
         }
