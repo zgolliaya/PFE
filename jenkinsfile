@@ -4,7 +4,7 @@ pipeline {
     stages {
         stage('Checkout') {
             steps {
-                   git branch: 'B2B', url: 'https://github.com/votre-utilisateur/votre-projet.git'
+                   git branch: 'B2B', url: 'https://github.com/zgolliaya/PFE.git'
             }
         }
         
