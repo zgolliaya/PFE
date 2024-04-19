@@ -11,7 +11,7 @@ pipeline {
         
         stage('Run Tests') {
             steps {
-                sh 'robot  D:/PFE/test1/APItest.robot'
+                sh 'robot ./test1/APItest.robot'
                 
             }
         }
