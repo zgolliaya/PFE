@@ -1,13 +1,13 @@
 *** Settings ***
-Library        SeleniumLibrary
+Library       SeleniumLibrary
 
 Library       RequestsLibrary
 
 Library       Collections
 
-Library      JSONLibrary
-Library        os
-Library        venv/Lib/site-packages/robot/libraries/String.py
+Library       JSONLibrary
+Library       os
+Library       venv/Lib/site-packages/robot/libraries/String.py
 
 *** Variables ***
 ${base_url}          https://b2b-backend.dev3.addinn-group.com
