@@ -4,34 +4,34 @@ pipeline {
     stages {
         stage('Checkout') {
             steps {
-                git branch: 'B2B', url: 'https://github.com/zgolliaya/PFE.git'
+                   git branch: 'B2B', url: 'https://github.com/zgolliaya/PFE.git'
             }
         }
         
+        
         stage('Run Tests') {
             steps {
-                script {
-                    // Assurez-vous que la commande 'robot' est disponible dans le chemin
-                    sh 'which robot'
-                    // Exécutez les tests Robot Framework
-                    sh 'robot -d output ./test1/APItest.robot'
-                }
+              
+               sh 'robot ./test1/APItest.robot'
+               sh "robot --output ${WORKSPACE}/robot-framework-results/output.xml --log ${WORKSPACE}/robot-framework-results/log.html --report ${WORKSPACE}/robot-framework-results/report.html --console verbose ${WORKSPACE}/robot-framework-tests"
+               step(
+             [
+            $class              : 'RobotPublisher',
+             outputPath          : './robot-framework-results',
+             outputFileName      : 'output.xml',
+             disableArchiveOutput: true,
+            logFileName         : 'log.html',
+            reportFileName      : 'report.html',
+             passThreshold       : 95,
+             unstableThreshold   : 90,
+             onlyCritical        : false
+             ]
+            )
+                
             }
         }
     }
     
-    post {
-        success {
-            emailext body: 'Le pipeline a réussi !', subject: 'Pipeline réussi', to: 'zgolliaya2000@gmail.com'
-        }
-        
-        failure {
-            emailext body: 'Le pipeline a échoué !', subject: 'Pipeline échoué', to: 'zgolliaya2000@gmail.com'
-        }
-        
-        unstable {
-            emailext body: 'Le pipeline est instable !', subject: 'Pipeline instable', to: 'zgolliaya2000@gmail.com'
-        }
-    }
+    
 }
 
