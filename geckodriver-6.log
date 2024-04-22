@@ -1,0 +1,17 @@
+1707821528060	geckodriver	INFO	Listening on 127.0.0.1:58128
+1707821531196	mozrunner::runner	INFO	Running command: "C:\\Users\\Salim Zgolli\\.cache\\selenium\\firefox\\win64\\122.0.1\\firefox.exe" "--marionette" "--remote-d ... "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "C:\\Users\\SALIMZ~1\\AppData\\Local\\Temp\\rust_mozprofileHifnq8"
+console.warn: services.settings: Ignoring preference override of remote settings server
+console.warn: services.settings: Allow by setting MOZ_REMOTE_SETTINGS_DEVTOOLS=1 in the environment
+1707821531569	Marionette	INFO	Marionette enabled
+Dynamically enable window occlusion 0
+1707821531679	Marionette	INFO	Listening on port 58139
+WebDriver BiDi listening on ws://127.0.0.1:58129
+Read port: 58139
+1707821531862	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+DevTools listening on ws://127.0.0.1:58129/devtools/browser/e8177ddb-c014-4e5d-9e62-ce0e783b6f41
+console.error: ({})
+console.warn: LoginRecipes: "Falling back to a synchronous message for: https://b2b-frontend.dev3.addinn-group.com."
+console.warn: LoginRecipes: "Falling back to a synchronous message for: https://b2b-frontend.dev3.addinn-group.com."
+1707821561601	addons.xpi	ERROR	System addon update list error SyntaxError: XMLHttpRequest.open: 'http://%(server)s/dummy-system-addons.xml' is not a valid URL.
+1707821600487	Marionette	INFO	Stopped listening on port 58139
+Dynamically enable window occlusion 1

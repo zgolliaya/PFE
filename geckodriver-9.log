@@ -1,0 +1,21 @@
+1707822968263	geckodriver	INFO	Listening on 127.0.0.1:58496
+1707822971346	mozrunner::runner	INFO	Running command: "C:\\Users\\Salim Zgolli\\.cache\\selenium\\firefox\\win64\\122.0.1\\firefox.exe" "--marionette" "--remote-d ... "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "C:\\Users\\SALIMZ~1\\AppData\\Local\\Temp\\rust_mozprofileTetArb"
+console.warn: services.settings: Ignoring preference override of remote settings server
+console.warn: services.settings: Allow by setting MOZ_REMOTE_SETTINGS_DEVTOOLS=1 in the environment
+1707822971719	Marionette	INFO	Marionette enabled
+Dynamically enable window occlusion 0
+1707822971822	Marionette	INFO	Listening on port 58508
+WebDriver BiDi listening on ws://127.0.0.1:58497
+Read port: 58508
+1707822972000	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+DevTools listening on ws://127.0.0.1:58497/devtools/browser/7c6422c5-be4e-4aa3-bc75-e7c6254fb1a3
+console.error: ({})
+console.warn: LoginRecipes: "Falling back to a synchronous message for: https://b2b-frontend.dev3.addinn-group.com."
+console.warn: LoginRecipes: "Falling back to a synchronous message for: https://b2b-frontend.dev3.addinn-group.com."
+1707823001772	addons.xpi	ERROR	System addon update list error SyntaxError: XMLHttpRequest.open: 'http://%(server)s/dummy-system-addons.xml' is not a valid URL.
+JavaScript error: resource://gre/modules/PromiseWorker.sys.mjs, line 102: Error: Could not get children of file(C:\Users\SALIMZ~1\AppData\Local\Temp\rust_mozprofileTetArb\thumbnails) because it does not exist
+JavaScript error: resource://gre/modules/PromiseWorker.sys.mjs, line 102: Error: Could not get children of file(C:\Users\SALIMZ~1\AppData\Local\Temp\rust_mozprofileTetArb\thumbnails) because it does not exist
+JavaScript error: resource://gre/modules/PromiseWorker.sys.mjs, line 102: Error: Could not get children of file(C:\Users\SALIMZ~1\AppData\Local\Temp\rust_mozprofileTetArb\thumbnails) because it does not exist
+JavaScript error: resource://gre/modules/PromiseWorker.sys.mjs, line 102: Error: Could not get children of file(C:\Users\SALIMZ~1\AppData\Local\Temp\rust_mozprofileTetArb\thumbnails) because it does not exist
+1707840271281	Marionette	INFO	Stopped listening on port 58508
+Dynamically enable window occlusion 1

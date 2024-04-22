@@ -4,16 +4,18 @@ pipeline {
     stages {
         stage('Checkout') {
             steps {
-                   git branch: 'B2B', url: 'https://github.com/zgolliaya/PFE.git'
+                git branch: 'B2B', url: 'https://github.com/zgolliaya/PFE.git'
             }
         }
         
-        
         stage('Run Tests') {
             steps {
-               sh 'pip install robotframework'
-               sh 'robot ./test1/APItest.robot'
-                
+                script {
+                    // Assurez-vous que la commande 'robot' est disponible dans le chemin
+                    sh 'which robot'
+                    // Exécutez les tests Robot Framework
+                    sh 'robot -d output ./test1/APItest.robot'
+                }
             }
         }
     }
@@ -32,3 +34,4 @@ pipeline {
         }
     }
 }
+
