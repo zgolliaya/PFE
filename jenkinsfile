@@ -12,7 +12,7 @@ pipeline {
         stage('Run Tests') {
             steps {
               
-               sh 'robot ./test1/APItest.robot'
+             
                sh "robot --output ${WORKSPACE}/robot-framework-results/output.xml --log ${WORKSPACE}/robot-framework-results/log.html --report ${WORKSPACE}/robot-framework-results/report.html --console verbose ${WORKSPACE}/robot-framework-tests"
                step(
              [
