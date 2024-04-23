@@ -1,6 +1,6 @@
 *** Settings ***
 Library    SeleniumLibrary
-variables   /var/jenkins_home/workspace/b2b_B2B/test1/addopexcel.robot
+variables   ./test1/lacators.py
 *** Variables ***
 ${LOGIN_URL}       https://b2b-frontend.dev3.addinn-group.com/auth/login
 ${USERNAME}        Admin
