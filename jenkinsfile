@@ -13,8 +13,8 @@ pipeline {
             steps {
               
                sh "pip install robotframework-seleniumlibrary"
-               sh " sudo apt-get update -y "
-               sh " sudo apt-get install -y chromium-driver "
+               sh "  apt-get update -y "
+               sh "  apt-get install -y chromium-driver "
                
 
                sh "robot ./test1/addopexcel.robot"
