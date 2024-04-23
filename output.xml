@@ -1,251 +1,89 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<robot generator="Robot 7.0 (Python 3.12.1 on win32)" generated="2024-04-22T17:11:16.207287" rpa="false" schemaversion="5">
-<suite id="s1" name="APItest" source="D:\PFE\test1\APItest.robot">
-<test id="s1-t1" name="Post_infologin" line="18">
-<kw name="Create Dictionary" owner="BuiltIn">
-<msg time="2024-04-22T17:11:16.952826" level="INFO">${header} = {'Content-Type': 'application/json', 'accept': '*/*'}</msg>
-<var>${header}</var>
-<arg>Content-Type=application/json</arg>
-<arg>accept=*/*</arg>
-<doc>Creates and returns a dictionary based on the given ``items``.</doc>
-<status status="PASS" start="2024-04-22T17:11:16.951827" elapsed="0.000999"/>
+<robot generator="Robot 7.0 (Python 3.12.1 on win32)" generated="2024-04-23T09:12:15.988459" rpa="false" schemaversion="5">
+<suite id="s1" name="Addopexcel" source="D:\PFE\test1\addopexcel.robot">
+<test id="s1-t1" name="logintest" line="13">
+<kw name="Set Selenium Timeout" owner="SeleniumLibrary">
+<arg>10s</arg>
+<doc>Sets the timeout that is used by various keywords.</doc>
+<status status="PASS" start="2024-04-23T09:12:16.821534" elapsed="0.000000"/>
 </kw>
-<kw name="Create Dictionary" owner="BuiltIn">
-<msg time="2024-04-22T17:11:16.953826" level="INFO">${body} = {'username': 'AyaZgolli', 'password': 'AAAZZZ', 'uuid': 'azerflk', 'appVersion': 'B2B'}</msg>
-<var>${body}</var>
-<arg>username=AyaZgolli</arg>
-<arg>password=AAAZZZ</arg>
-<arg>uuid=azerflk</arg>
-<arg>appVersion=B2B</arg>
-<doc>Creates and returns a dictionary based on the given ``items``.</doc>
-<status status="PASS" start="2024-04-22T17:11:16.952826" elapsed="0.001000"/>
+<kw name="Access Web Page With Authentication" owner="login">
+<kw name="Open Browser" owner="SeleniumLibrary">
+<msg time="2024-04-23T09:12:16.821534" level="INFO">Opening browser 'Chrome' to base url 'https://b2b-frontend.dev3.addinn-group.com/auth/login'.</msg>
+<arg>${LOGIN_URL}</arg>
+<arg>Chrome</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="PASS" start="2024-04-23T09:12:16.821534" elapsed="19.533021"/>
 </kw>
-<kw name="Create Session" owner="RequestsLibrary">
-<msg time="2024-04-22T17:11:16.953826" level="INFO">Creating Session using : alias=mysession, url=https://b2b-backend.dev3.addinn-group.com, headers={'Content-Type': 'application/json', 'accept': '*/*'},                     cookies={}, auth=None, timeout=None, proxies=None, verify=True,                     debug=0 </msg>
-<arg>mysession</arg>
-<arg>${base_url}</arg>
-<arg>headers=${header}</arg>
-<arg>verify=${True}</arg>
-<doc>Create Session: create a HTTP session to a server</doc>
-<status status="PASS" start="2024-04-22T17:11:16.953826" elapsed="0.001000"/>
+<kw name="Maximize Browser Window" owner="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" start="2024-04-23T09:12:36.354555" elapsed="0.142357"/>
 </kw>
-<kw name="POST On Session" owner="RequestsLibrary">
-<msg time="2024-04-22T17:11:18.011721" level="INFO">POST Request : url=https://b2b-backend.dev3.addinn-group.com/api/Mobile_Operator/LoginOperator 
- path_url=/api/Mobile_Operator/LoginOperator 
- headers={'User-Agent': 'python-requests/2.31.0', 'Accept-Encoding': 'gzip, deflate', 'accept': '*/*', 'Connection': 'keep-alive', 'Content-Type': 'application/json', 'Content-Length': '87'} 
- body=b'{"username": "AyaZgolli", "password": "AAAZZZ", "uuid": "azerflk", "appVersion": "B2B"}' 
- </msg>
-<msg time="2024-04-22T17:11:18.011721" level="INFO">POST Response : url=https://b2b-backend.dev3.addinn-group.com/api/Mobile_Operator/LoginOperator 
- status=200, reason=OK 
- headers={'Date': 'Mon, 22 Apr 2024 16:11:17 GMT', 'Content-Type': 'application/json; charset=utf-8', 'Transfer-Encoding': 'chunked', 'Connection': 'keep-alive', 'Strict-Transport-Security': 'max-age=15724800; includeSubDomains'} 
- body={"resultat":{"userModel":{"token":"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJmdWxsTmFtZSI6IkF5YSBaZ29sbGkiLCJVc2VybmFtZSI6IkF5YVpnb2xsaSIsIkFkbWluSWQiOiIyIiwiT3BlcmF0b3JJZCI6Ijk5NzAwIiwiRmlyc3RuYW1lIjoiQXlhIiwiTGFzdG5hbWUiOiJaZ29sbGkiLCJQYXJraW5nSWQiOiI3MDc3IiwiUGFya2luZ0RldmljZUlkIjoiNzk5IiwiQ2FzaGllckNvbnRyYWN0SWQiOiIxIiwiQ2FzaGllckNvbnN1bWVySWQiOiIyMDUiLCJleHAiOjE3MTQwMTgyNzd9.UMWs8tlLmZqIjy7Ti2KgW63vRZ0J59Tquf-bjNZ5hZI","user":{"userId":2,"firstname":"Aya","lastname":"Zgolli","username":"AyaZgolli","virtualExit":false,"carparkname":"PUMC Carpark","paymentMethod":"Credit Card","totalTransactions":"0","paidParkingNumber":0,"paidParkingAmount":"0","producedArticlesNumber":0,"producedArticlesAmount":"0","cashAmount":"0.000","cardAmount":"0.000","validatedTicket":"0","shift":false,"ticketInformation":false,"payment":true,"validation":true,"production":false,"deviceControl":true,"app_Min_Version":"1.4","app_Current_Version":"1.4","currency":"KWD","date_Format":"dd-MM-yyyy","login_Session_Expiration":"3600","payment_Timeout":"1","media_Input":["Licence Plate","Barcode"],"default_Media_Input":"None","barcode_Types":["CODE_128","ITF"],"shift_Start_Amount":true,"receipt_Printing":false,"shift_Report_Printing":false}}},"status":200,"fail_Messages":null} 
- </msg>
-<msg time="2024-04-22T17:11:18.012677" level="INFO">${response} = &lt;Response [200]&gt;</msg>
-<var>${response}</var>
-<arg>mysession</arg>
-<arg>${loginop}</arg>
-<arg>json=${body}</arg>
-<arg>headers=${header}</arg>
-<doc>Sends a POST request on a previously created HTTP Session.</doc>
-<status status="PASS" start="2024-04-22T17:11:16.954826" elapsed="1.057851"/>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2024-04-23T09:12:38.501124" level="INFO">Slept 2 seconds.</msg>
+<arg>2s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2024-04-23T09:12:36.499869" elapsed="2.001255"/>
 </kw>
-<kw name="Log To Console" owner="BuiltIn">
-<arg>${response}</arg>
-<doc>Logs the given message to the console.</doc>
-<status status="PASS" start="2024-04-22T17:11:18.013685" elapsed="0.000992"/>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-04-23T09:12:38.501124" level="INFO">Typing text 'Admin' into text field 'xpath=//input[contains(@formcontrolname,'username')] '.</msg>
+<arg>${usernamexpath}</arg>
+<arg>${USERNAME}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-04-23T09:12:38.501124" elapsed="0.176748"/>
 </kw>
-<kw name="Log To Console" owner="BuiltIn">
-<arg>${response.content}</arg>
-<doc>Logs the given message to the console.</doc>
-<status status="PASS" start="2024-04-22T17:11:18.014677" elapsed="0.003020"/>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2024-04-23T09:12:40.677905" level="INFO">Slept 2 seconds.</msg>
+<arg>2s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2024-04-23T09:12:38.677872" elapsed="2.000033"/>
 </kw>
-<kw name="Convert To String" owner="BuiltIn">
-<msg time="2024-04-22T17:11:18.018680" level="INFO">${status_code} = 200</msg>
-<var>${status_code}</var>
-<arg>${response.status_code}</arg>
-<doc>Converts the given item to a Unicode string.</doc>
-<status status="PASS" start="2024-04-22T17:11:18.017697" elapsed="0.000983"/>
+<kw name="Input Password" owner="SeleniumLibrary">
+<msg time="2024-04-23T09:12:40.677905" level="INFO">Typing password into text field 'xpath=//input[contains(@formcontrolname,'password')]'.</msg>
+<msg time="2024-04-23T09:12:40.756088" level="INFO">Temporally setting log level to: NONE</msg>
+<arg>${passwordxpath}</arg>
+<arg>${PASSWORD}</arg>
+<doc>Types the given password into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-04-23T09:12:40.677905" elapsed="0.163535"/>
 </kw>
-<kw name="Should Be Equal" owner="BuiltIn">
-<arg>${status_code}</arg>
-<arg>200</arg>
-<doc>Fails if the given objects are unequal.</doc>
-<status status="PASS" start="2024-04-22T17:11:18.019688" elapsed="0.000000"/>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2024-04-23T09:12:42.842237" level="INFO">Slept 2 seconds.</msg>
+<arg>2s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2024-04-23T09:12:40.841440" elapsed="2.000797"/>
 </kw>
-<kw name="Convert To String" owner="BuiltIn">
-<msg time="2024-04-22T17:11:18.021682" level="INFO">${res_body} = {"resultat":{"userModel":{"token":"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJmdWxsTmFtZSI6IkF5YSBaZ29sbGkiLCJVc2VybmFtZSI6IkF5YVpnb2xsaSIsIkFkbWluSWQiOiIyIiwiT3BlcmF0b3JJZCI6Ijk5NzAwIiwiRmlyc3RuYW1lIjoi...</msg>
-<var>${res_body}</var>
-<arg>${response.content}</arg>
-<doc>Converts the given item to a Unicode string.</doc>
-<status status="PASS" start="2024-04-22T17:11:18.020694" elapsed="0.000988"/>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-04-23T09:12:42.842237" level="INFO">Clicking element ' xpath=//button[contains(@class,'btn btn-primary')] '.</msg>
+<arg>${continuebutton}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-04-23T09:12:42.842237" elapsed="0.062872"/>
 </kw>
-<kw name="Should Contain" owner="BuiltIn">
-<arg>${res_body}</arg>
-<arg>PUMC Carpark</arg>
-<doc>Fails if ``container`` does not contain ``item`` one or more times.</doc>
-<status status="PASS" start="2024-04-22T17:11:18.022682" elapsed="0.000000"/>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2024-04-23T09:12:46.906366" level="INFO">Slept 4 seconds.</msg>
+<arg>4s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2024-04-23T09:12:42.906111" elapsed="4.000255"/>
 </kw>
-<kw name="Set Global Variable" owner="BuiltIn">
-<msg time="2024-04-22T17:11:18.023681" level="INFO">${response} = &lt;Response [200]&gt;</msg>
-<arg>${response}</arg>
-<doc>Makes a variable available globally in all tests and suites.</doc>
-<status status="PASS" start="2024-04-22T17:11:18.023681" elapsed="0.000000"/>
+<status status="PASS" start="2024-04-23T09:12:16.821534" elapsed="30.084832"/>
 </kw>
-<status status="PASS" start="2024-04-22T17:11:16.950842" elapsed="1.073849"/>
+<tag>userpassword</tag>
+<status status="PASS" start="2024-04-23T09:12:16.821534" elapsed="30.084832"/>
 </test>
-<test id="s1-t2" name="Get_all" line="31">
-<kw name="Set Variable" owner="BuiltIn">
-<msg time="2024-04-22T17:11:18.027729" level="INFO">${json_response} = {'resultat': {'userModel': {'token': 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJmdWxsTmFtZSI6IkF5YSBaZ29sbGkiLCJVc2VybmFtZSI6IkF5YVpnb2xsaSIsIkFkbWluSWQiOiIyIiwiT3BlcmF0b3JJZCI6Ijk5NzAwIiwiRmlyc3RuYW1lI...</msg>
-<var>${json_response}</var>
-<arg>${response.json()}</arg>
-<doc>Returns the given values which can then be assigned to a variables.</doc>
-<status status="PASS" start="2024-04-22T17:11:18.026679" elapsed="0.001050"/>
+<kw name="Close All Browsers" owner="SeleniumLibrary" type="TEARDOWN">
+<doc>Closes all open browsers and resets the browser cache.</doc>
+<status status="PASS" start="2024-04-23T09:12:46.906366" elapsed="6.312365"/>
 </kw>
-<kw name="Log To Console" owner="BuiltIn">
-<arg>${json_response}</arg>
-<doc>Logs the given message to the console.</doc>
-<status status="PASS" start="2024-04-22T17:11:18.028704" elapsed="0.002997"/>
-</kw>
-<kw name="Get Value From Json" owner="JSONLibrary">
-<msg time="2024-04-22T17:11:18.083808" level="INFO">${token} = ['eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJmdWxsTmFtZSI6IkF5YSBaZ29sbGkiLCJVc2VybmFtZSI6IkF5YVpnb2xsaSIsIkFkbWluSWQiOiIyIiwiT3BlcmF0b3JJZCI6Ijk5NzAwIiwiRmlyc3RuYW1lIjoiQXlhIiwiTGFzdG5hbWUiOiJaZ29sbGkiL...</msg>
-<var>${token}</var>
-<arg>${json_response}</arg>
-<arg>$.resultat.userModel.token</arg>
-<doc>Get Value From JSON using JSONPath</doc>
-<status status="PASS" start="2024-04-22T17:11:18.031701" elapsed="0.053083"/>
-</kw>
-<kw name="Log To Console" owner="BuiltIn">
-<arg>${token}</arg>
-<doc>Logs the given message to the console.</doc>
-<status status="PASS" start="2024-04-22T17:11:18.085750" elapsed="0.001986"/>
-</kw>
-<kw name="Set Variable" owner="BuiltIn">
-<msg time="2024-04-22T17:11:18.089751" level="INFO">${token_l} = eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJmdWxsTmFtZSI6IkF5YSBaZ29sbGkiLCJVc2VybmFtZSI6IkF5YVpnb2xsaSIsIkFkbWluSWQiOiIyIiwiT3BlcmF0b3JJZCI6Ijk5NzAwIiwiRmlyc3RuYW1lIjoiQXlhIiwiTGFzdG5hbWUiOiJaZ29sbGkiLCJ...</msg>
-<var>${token_l}</var>
-<arg>${token}[0]</arg>
-<doc>Returns the given values which can then be assigned to a variables.</doc>
-<status status="PASS" start="2024-04-22T17:11:18.088754" elapsed="0.000997"/>
-</kw>
-<kw name="Set Variable" owner="BuiltIn">
-<msg time="2024-04-22T17:11:18.090762" level="INFO">${authorization_header} = Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJmdWxsTmFtZSI6IkF5YSBaZ29sbGkiLCJVc2VybmFtZSI6IkF5YVpnb2xsaSIsIkFkbWluSWQiOiIyIiwiT3BlcmF0b3JJZCI6Ijk5NzAwIiwiRmlyc3RuYW1lIjoiQXlhIiwiTGFzdG5hbWUiOiJaZ29s...</msg>
-<var>${authorization_header}</var>
-<arg>Bearer ${token_l}</arg>
-<doc>Returns the given values which can then be assigned to a variables.</doc>
-<status status="PASS" start="2024-04-22T17:11:18.089751" elapsed="0.001011"/>
-</kw>
-<kw name="Log To Console" owner="BuiltIn">
-<arg>${authorization_header}</arg>
-<doc>Logs the given message to the console.</doc>
-<status status="PASS" start="2024-04-22T17:11:18.090762" elapsed="0.001970"/>
-</kw>
-<kw name="Create Dictionary" owner="BuiltIn">
-<msg time="2024-04-22T17:11:18.093731" level="INFO">${header} = {'Authorization': 'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJmdWxsTmFtZSI6IkF5YSBaZ29sbGkiLCJVc2VybmFtZSI6IkF5YVpnb2xsaSIsIkFkbWluSWQiOiIyIiwiT3BlcmF0b3JJZCI6Ijk5NzAwIiwiRmlyc3RuYW1lIjoiQXlhIiwiT...</msg>
-<var>${header}</var>
-<arg>Authorization=${authorization_header}</arg>
-<doc>Creates and returns a dictionary based on the given ``items``.</doc>
-<status status="PASS" start="2024-04-22T17:11:18.092732" elapsed="0.000999"/>
-</kw>
-<kw name="GET On Session" owner="RequestsLibrary">
-<msg time="2024-04-22T17:11:18.119839" level="INFO">GET Request : url=https://b2b-backend.dev3.addinn-group.com/api/Mobile_DeviceControl/GetAll 
- path_url=/api/Mobile_DeviceControl/GetAll 
- headers={'User-Agent': 'python-requests/2.31.0', 'Accept-Encoding': 'gzip, deflate', 'accept': '*/*', 'Connection': 'keep-alive', 'Content-Type': 'application/json', 'Authorization': 'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJmdWxsTmFtZSI6IkF5YSBaZ29sbGkiLCJVc2VybmFtZSI6IkF5YVpnb2xsaSIsIkFkbWluSWQiOiIyIiwiT3BlcmF0b3JJZCI6Ijk5NzAwIiwiRmlyc3RuYW1lIjoiQXlhIiwiTGFzdG5hbWUiOiJaZ29sbGkiLCJQYXJraW5nSWQiOiI3MDc3IiwiUGFya2luZ0RldmljZUlkIjoiNzk5IiwiQ2FzaGllckNvbnRyYWN0SWQiOiIxIiwiQ2FzaGllckNvbnN1bWVySWQiOiIyMDUiLCJleHAiOjE3MTQwMTgyNzd9.UMWs8tlLmZqIjy7Ti2KgW63vRZ0J59Tquf-bjNZ5hZI'} 
- body=None 
- </msg>
-<msg time="2024-04-22T17:11:18.119839" level="INFO">GET Response : url=https://b2b-backend.dev3.addinn-group.com/api/Mobile_DeviceControl/GetAll 
- status=200, reason=OK 
- headers={'Date': 'Mon, 22 Apr 2024 16:11:17 GMT', 'Content-Type': 'application/json; charset=utf-8', 'Transfer-Encoding': 'chunked', 'Connection': 'keep-alive', 'Strict-Transport-Security': 'max-age=15724800; includeSubDomains'} 
- body={"resultat":{"id":2,"canOpenBarrierForEntry":true,"canCloseBarrierForEntry":true,"canLockBarrierForEntry":false,"canUnlockBarrierForEntry":false,"canSetOffOperationForEnty":false,"canSetInOperationForEnty":false,"canOpenBarrierForExit":false,"canCloseBarrierForExit":false,"canLockBarrierForExit":false,"canUnlockBarrierForExit":false,"canSetOffOperationForExit":false,"canSetInOperationForExit":false,"canEnableJamForExit":true,"canDisableJamForExit":true,"canOpenBarrierForPassage":true,"canCloseBarrierForPassage":true,"canSetOffOperationForPassage":false,"canSetInOperationForPassage":false,"canOpenForDoorReader":false,"canCloseForDoorReader":false,"canLockBarrierForDoorReader":true,"canUnlockBarrierForDoorReader":true,"canSetOffOperationDoorForDoorReader":false,"canSetInOperationForDoorReader":false,"canReplaceTicketForAutomaticPayStation":false,"canSetOffOperationForAutomaticPayStation":false,"canSetInOperationForAutomaticPayStation":false,"modifiedDate":"02-04-2024 13:50:24"},"status":200,"fail_Messages":null} 
- </msg>
-<msg time="2024-04-22T17:11:18.120825" level="INFO">${resp} = &lt;Response [200]&gt;</msg>
-<var>${resp}</var>
-<arg>mysession</arg>
-<arg>${ticketconsult}</arg>
-<arg>headers=${header}</arg>
-<doc>Sends a GET request on a previously created HTTP Session.</doc>
-<status status="PASS" start="2024-04-22T17:11:18.093731" elapsed="0.027094"/>
-</kw>
-<kw name="Log To Console" owner="BuiltIn">
-<arg>${resp.content}</arg>
-<doc>Logs the given message to the console.</doc>
-<status status="PASS" start="2024-04-22T17:11:18.121836" elapsed="0.001988"/>
-</kw>
-<kw name="Log To Console" owner="BuiltIn">
-<arg>${resp.status_code}</arg>
-<doc>Logs the given message to the console.</doc>
-<status status="PASS" start="2024-04-22T17:11:18.124824" elapsed="0.001042"/>
-</kw>
-<status status="PASS" start="2024-04-22T17:11:18.025693" elapsed="0.101145"/>
-</test>
-<test id="s1-t3" name="PUT_sendcommande" line="44">
-<kw name="Create Dictionary" owner="BuiltIn">
-<msg time="2024-04-22T17:11:18.129824" level="INFO">${header} = {'Content-Type': 'application/json', 'accept': '*/*'}</msg>
-<var>${header}</var>
-<arg>Content-Type=application/json</arg>
-<arg>accept=*/*</arg>
-<doc>Creates and returns a dictionary based on the given ``items``.</doc>
-<status status="PASS" start="2024-04-22T17:11:18.128949" elapsed="0.000875"/>
-</kw>
-<kw name="Create Dictionary" owner="BuiltIn">
-<msg time="2024-04-22T17:11:18.132835" level="INFO">${body} = {'deviceId': ' 0', 'command': ' close', 'raison': ' string'}</msg>
-<var>${body}</var>
-<arg>deviceId= 0</arg>
-<arg>command= open</arg>
-<arg>command= close</arg>
-<arg>raison= string</arg>
-<doc>Creates and returns a dictionary based on the given ``items``.</doc>
-<status status="PASS" start="2024-04-22T17:11:18.131827" elapsed="0.001008"/>
-</kw>
-<kw name="Create Session" owner="RequestsLibrary">
-<msg time="2024-04-22T17:11:18.134824" level="INFO">Creating Session using : alias=mysession1, url=https://b2b-backend.dev3.addinn-group.com, headers={'Content-Type': 'application/json', 'accept': '*/*'},                     cookies={}, auth=None, timeout=None, proxies=None, verify=True,                     debug=0 </msg>
-<arg>mysession1</arg>
-<arg>${base_url}</arg>
-<arg>headers=${header}</arg>
-<arg>verify=${True}</arg>
-<doc>Create Session: create a HTTP session to a server</doc>
-<status status="PASS" start="2024-04-22T17:11:18.133851" elapsed="0.002988"/>
-</kw>
-<kw name="PUT On Session" owner="RequestsLibrary">
-<msg time="2024-04-22T17:11:18.610424" level="INFO">PUT Request : url=https://b2b-backend.dev3.addinn-group.com/api/Mobile_Operator/LoginOperator 
- path_url=/api/Mobile_Operator/LoginOperator 
- headers={'User-Agent': 'python-requests/2.31.0', 'Accept-Encoding': 'gzip, deflate', 'accept': '*/*', 'Connection': 'keep-alive', 'Content-Type': 'application/json', 'Content-Length': '60'} 
- body=b'{"deviceId": " 0", "command": " close", "raison": " string"}' 
- </msg>
-<msg time="2024-04-22T17:11:18.610424" level="INFO">PUT Response : url=https://b2b-backend.dev3.addinn-group.com/api/Mobile_Operator/LoginOperator 
- status=405, reason=Method Not Allowed 
- headers={'Date': 'Mon, 22 Apr 2024 16:11:18 GMT', 'Content-Length': '0', 'Connection': 'keep-alive', 'Allow': 'POST', 'Strict-Transport-Security': 'max-age=15724800; includeSubDomains'} 
- body=None 
- </msg>
-<msg time="2024-04-22T17:11:18.610424" level="FAIL">HTTPError: 405 Client Error: Method Not Allowed for url: https://b2b-backend.dev3.addinn-group.com/api/Mobile_Operator/LoginOperator</msg>
-<var>${response1}</var>
-<arg>mysession1</arg>
-<arg>${loginop}</arg>
-<arg>json=${body}</arg>
-<arg>headers=${header}</arg>
-<doc>Sends a PUT request on a previously created HTTP Session.</doc>
-<status status="FAIL" start="2024-04-22T17:11:18.138837" elapsed="0.483625">HTTPError: 405 Client Error: Method Not Allowed for url: https://b2b-backend.dev3.addinn-group.com/api/Mobile_Operator/LoginOperator</status>
-</kw>
-<kw name="Log To Console" owner="BuiltIn">
-<arg>${response1.status_code}</arg>
-<doc>Logs the given message to the console.</doc>
-<status status="NOT RUN" start="2024-04-22T17:11:18.623464" elapsed="0.000000"/>
-</kw>
-<kw name="Log To Console" owner="BuiltIn">
-<arg>${response1.content}</arg>
-<doc>Logs the given message to the console.</doc>
-<status status="NOT RUN" start="2024-04-22T17:11:18.626466" elapsed="0.000000"/>
-</kw>
-<status status="FAIL" start="2024-04-22T17:11:18.128949" elapsed="0.497517">HTTPError: 405 Client Error: Method Not Allowed for url: https://b2b-backend.dev3.addinn-group.com/api/Mobile_Operator/LoginOperator</status>
-</test>
-<status status="FAIL" start="2024-04-22T17:11:16.213292" elapsed="2.416120"/>
+<status status="PASS" start="2024-04-23T09:12:15.988459" elapsed="37.230272"/>
 </suite>
 <statistics>
 <total>
-<stat pass="2" fail="1" skip="0">All Tests</stat>
+<stat pass="1" fail="0" skip="0">All Tests</stat>
 </total>
 <tag>
+<stat pass="1" fail="0" skip="0">userpassword</stat>
 </tag>
 <suite>
-<stat pass="2" fail="1" skip="0" id="s1" name="APItest">APItest</stat>
+<stat pass="1" fail="0" skip="0" id="s1" name="Addopexcel">Addopexcel</stat>
 </suite>
 </statistics>
 <errors>

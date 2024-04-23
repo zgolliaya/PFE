@@ -15,6 +15,7 @@ pipeline {
                sh "pip install SeleniumLibrary"
                sh "pip install JSONLibrary"
                sh "robot --output ${WORKSPACE}/robot-framework-results/output.xml --log ${WORKSPACE}/robot-framework-results/log.html --report ${WORKSPACE}/robot-framework-results/report.html --console verbose ${WORKSPACE}/robot-framework-tests"
+               sh "robot ./test1/addopexcel.robot"
                step(
              [
             $class              : 'RobotPublisher',
