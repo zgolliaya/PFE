@@ -17,7 +17,7 @@ pipeline {
                sh "  apt-get install -y chromium-driver "
                
 
-               sh "robot ./test1/addopexcel.robot"
+               sh "robot ./test1/*.robot"
                step(
              [
             $class              : 'RobotPublisher',
