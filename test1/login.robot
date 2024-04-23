@@ -1,6 +1,6 @@
 *** Settings ***
 Library    SeleniumLibrary
-variables  D:/PFE/test1/lacators.py
+variables  ./${workspace}/test1/addopexcel.robot
 *** Variables ***
 ${LOGIN_URL}       https://b2b-frontend.dev3.addinn-group.com/auth/login
 ${USERNAME}        Admin
