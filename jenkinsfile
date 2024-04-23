@@ -18,24 +18,26 @@ pipeline {
                
 
                sh "robot ./test1/addopexcel.robot"
-               step(
-             [
-            $class              : 'RobotPublisher',
-             outputPath          : './',
-             outputFileName      : 'output.xml',
-             disableArchiveOutput: true,
-            logFileName         : 'log.html',
-            reportFileName      : 'report.html',
-             passThreshold       : 95,
-             unstableThreshold   : 90,
-             onlyCritical        : false
-             ]
-            )
+
                 
             }
         }
     }
-    
+
+  post {
+    always {
+      script {
+      step([
+    $class : 'RobotPublisher',
+    outputPath :'./',
+    outputFileName : "*.xml",
+    disableArchiveOutput : false,
+    passThreshold : 0,
+    unstableThreshold: 0,
+    otherFiles : "*.png",
+])
+      }
+    }
+  }
     
 }
-
