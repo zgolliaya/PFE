@@ -1,7 +1,7 @@
 *** Settings ***
 Library    SeleniumLibrary
 Resource    login.robot
-variables  D:/PFE/test1/lacators.py
+variables   ${CURDIR}/lacators.py
 *** Keywords ***
 Add Operators
   [Arguments]    ${first_name}    ${last_name}    ${username}    ${password}    ${repeat_password}    ${Contract}   ${CONSUMER}    ${ashierPassword}  
