@@ -1,7 +1,7 @@
 *** Settings ***
 Library   SeleniumLibrary
 Resource   login.robot
-variables  D:/PFE/test1/lacators.py
+variables   ${CURDIR}/lacators.py
 *** Keywords ***
 add validation
   Click Element    ${articlvalid}
