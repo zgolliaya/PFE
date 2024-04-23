@@ -1,6 +1,6 @@
 *** Settings ***
 Library    SeleniumLibrary
-variables  D:/PFE/test1/lacators.py
+Variables   D:/PFE/test1/lacators.py
 *** Variables ***
 ${LOGIN_URL}       https://b2b-frontend.dev3.addinn-group.com/auth/login
 ${USERNAME}        Admin

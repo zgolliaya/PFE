@@ -39,7 +39,7 @@ checkbox1="//input[contains(@formcontrolname, 'canOpenBarrierForEntry')]"
 checkbox2="//input[contains(@formcontrolname, 'canCloseBarrierForEntry')]"
 checkbox3="//input[contains(@formcontrolname, 'canLockBarrierForEntry')]"
 checkbox4="//input[contains(@formcontrolname, 'canUnlockBarrierForEntry')]"
-checkbox5="//input[contains(@formcontrolname, 'canSetOffOperationForEnty')]"
+checkbox5="//input[contains(@formcontrolname, 'canSetOffOperationForEnt y')]"
 checkbox6="//input[contains(@formcontrolname, 'canSetInOperationForEntry')]"
 #EXIT'
 checkbox7="//input[contains(@formcontrolname, 'canOpenBarrierForExit')]"

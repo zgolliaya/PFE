@@ -13,25 +13,33 @@ pipeline {
             steps {
               
                sh "pip install robotframework-seleniumlibrary"
-               sh "robot ./test1/addopexcel.robot"
-               step(
-             [
-            $class              : 'RobotPublisher',
-             outputPath          : './robot-framework-results',
-             outputFileName      : 'output.xml',
-             disableArchiveOutput: true,
-            logFileName         : 'log.html',
-            reportFileName      : 'report.html',
-             passThreshold       : 95,
-             unstableThreshold   : 90,
-             onlyCritical        : false
-             ]
-            )
+               sh "  apt-get update -y "
+               sh "  apt-get install -y chromium-driver "
+               sh "robot ./test1/*.robot"
+
+              // sh "robot ./test1/addopexcel.robot"
+
                 
             }
         }
     }
-    
+
+  post {
+    always {
+      script {
+      step([
+    $class : 'RobotPublisher',
+    outputPath :'./',
+    outputFileName : "*.xml",
+    disableArchiveOutput : false,
+    passThreshold : 100,
+    unstableThreshold: 95.0,
+    otherFiles : "*.png",
+])
+      }
+    }
+  }
     
 }
 
+      

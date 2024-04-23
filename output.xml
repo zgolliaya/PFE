@@ -1,79 +1,79 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<robot generator="Robot 7.0 (Python 3.12.1 on win32)" generated="2024-04-23T09:12:15.988459" rpa="false" schemaversion="5">
+<robot generator="Robot 7.0 (Python 3.12.1 on win32)" generated="2024-04-23T11:37:41.078537" rpa="false" schemaversion="5">
 <suite id="s1" name="Addopexcel" source="D:\PFE\test1\addopexcel.robot">
 <test id="s1-t1" name="logintest" line="13">
 <kw name="Set Selenium Timeout" owner="SeleniumLibrary">
 <arg>10s</arg>
 <doc>Sets the timeout that is used by various keywords.</doc>
-<status status="PASS" start="2024-04-23T09:12:16.821534" elapsed="0.000000"/>
+<status status="PASS" start="2024-04-23T11:37:41.784537" elapsed="0.001000"/>
 </kw>
 <kw name="Access Web Page With Authentication" owner="login">
 <kw name="Open Browser" owner="SeleniumLibrary">
-<msg time="2024-04-23T09:12:16.821534" level="INFO">Opening browser 'Chrome' to base url 'https://b2b-frontend.dev3.addinn-group.com/auth/login'.</msg>
+<msg time="2024-04-23T11:37:41.786537" level="INFO">Opening browser 'Chrome' to base url 'https://b2b-frontend.dev3.addinn-group.com/auth/login'.</msg>
 <arg>${LOGIN_URL}</arg>
 <arg>Chrome</arg>
 <doc>Opens a new browser instance to the optional ``url``.</doc>
-<status status="PASS" start="2024-04-23T09:12:16.821534" elapsed="19.533021"/>
+<status status="PASS" start="2024-04-23T11:37:41.786537" elapsed="8.970899"/>
 </kw>
 <kw name="Maximize Browser Window" owner="SeleniumLibrary">
 <doc>Maximizes current browser window.</doc>
-<status status="PASS" start="2024-04-23T09:12:36.354555" elapsed="0.142357"/>
+<status status="PASS" start="2024-04-23T11:37:50.758434" elapsed="0.284998"/>
 </kw>
 <kw name="Sleep" owner="BuiltIn">
-<msg time="2024-04-23T09:12:38.501124" level="INFO">Slept 2 seconds.</msg>
+<msg time="2024-04-23T11:37:53.044555" level="INFO">Slept 2 seconds.</msg>
 <arg>2s</arg>
 <doc>Pauses the test executed for the given time.</doc>
-<status status="PASS" start="2024-04-23T09:12:36.499869" elapsed="2.001255"/>
+<status status="PASS" start="2024-04-23T11:37:51.043432" elapsed="2.001873"/>
 </kw>
 <kw name="Input Text" owner="SeleniumLibrary">
-<msg time="2024-04-23T09:12:38.501124" level="INFO">Typing text 'Admin' into text field 'xpath=//input[contains(@formcontrolname,'username')] '.</msg>
+<msg time="2024-04-23T11:37:53.047350" level="INFO">Typing text 'Admin' into text field 'xpath=//input[contains(@formcontrolname,'username')] '.</msg>
 <arg>${usernamexpath}</arg>
 <arg>${USERNAME}</arg>
 <doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<status status="PASS" start="2024-04-23T09:12:38.501124" elapsed="0.176748"/>
+<status status="PASS" start="2024-04-23T11:37:53.046303" elapsed="1.701498"/>
 </kw>
 <kw name="Sleep" owner="BuiltIn">
-<msg time="2024-04-23T09:12:40.677905" level="INFO">Slept 2 seconds.</msg>
+<msg time="2024-04-23T11:37:56.748561" level="INFO">Slept 2 seconds.</msg>
 <arg>2s</arg>
 <doc>Pauses the test executed for the given time.</doc>
-<status status="PASS" start="2024-04-23T09:12:38.677872" elapsed="2.000033"/>
+<status status="PASS" start="2024-04-23T11:37:54.747801" elapsed="2.000760"/>
 </kw>
 <kw name="Input Password" owner="SeleniumLibrary">
-<msg time="2024-04-23T09:12:40.677905" level="INFO">Typing password into text field 'xpath=//input[contains(@formcontrolname,'password')]'.</msg>
-<msg time="2024-04-23T09:12:40.756088" level="INFO">Temporally setting log level to: NONE</msg>
+<msg time="2024-04-23T11:37:56.749555" level="INFO">Typing password into text field 'xpath=//input[contains(@formcontrolname,'password')]'.</msg>
+<msg time="2024-04-23T11:37:56.810272" level="INFO">Temporally setting log level to: NONE</msg>
 <arg>${passwordxpath}</arg>
 <arg>${PASSWORD}</arg>
 <doc>Types the given password into the text field identified by ``locator``.</doc>
-<status status="PASS" start="2024-04-23T09:12:40.677905" elapsed="0.163535"/>
+<status status="PASS" start="2024-04-23T11:37:56.748561" elapsed="0.170648"/>
 </kw>
 <kw name="Sleep" owner="BuiltIn">
-<msg time="2024-04-23T09:12:42.842237" level="INFO">Slept 2 seconds.</msg>
+<msg time="2024-04-23T11:37:58.919774" level="INFO">Slept 2 seconds.</msg>
 <arg>2s</arg>
 <doc>Pauses the test executed for the given time.</doc>
-<status status="PASS" start="2024-04-23T09:12:40.841440" elapsed="2.000797"/>
+<status status="PASS" start="2024-04-23T11:37:56.919209" elapsed="2.000565"/>
 </kw>
 <kw name="Click Element" owner="SeleniumLibrary">
-<msg time="2024-04-23T09:12:42.842237" level="INFO">Clicking element ' xpath=//button[contains(@class,'btn btn-primary')] '.</msg>
+<msg time="2024-04-23T11:37:58.920773" level="INFO">Clicking element ' xpath=//button[contains(@class,'btn btn-primary')] '.</msg>
 <arg>${continuebutton}</arg>
 <doc>Click the element identified by ``locator``.</doc>
-<status status="PASS" start="2024-04-23T09:12:42.842237" elapsed="0.062872"/>
+<status status="PASS" start="2024-04-23T11:37:58.919774" elapsed="0.112579"/>
 </kw>
 <kw name="Sleep" owner="BuiltIn">
-<msg time="2024-04-23T09:12:46.906366" level="INFO">Slept 4 seconds.</msg>
+<msg time="2024-04-23T11:38:03.033670" level="INFO">Slept 4 seconds.</msg>
 <arg>4s</arg>
 <doc>Pauses the test executed for the given time.</doc>
-<status status="PASS" start="2024-04-23T09:12:42.906111" elapsed="4.000255"/>
+<status status="PASS" start="2024-04-23T11:37:59.032353" elapsed="4.001317"/>
 </kw>
-<status status="PASS" start="2024-04-23T09:12:16.821534" elapsed="30.084832"/>
+<status status="PASS" start="2024-04-23T11:37:41.785537" elapsed="21.248133"/>
 </kw>
 <tag>userpassword</tag>
-<status status="PASS" start="2024-04-23T09:12:16.821534" elapsed="30.084832"/>
+<status status="PASS" start="2024-04-23T11:37:41.782536" elapsed="21.252830"/>
 </test>
 <kw name="Close All Browsers" owner="SeleniumLibrary" type="TEARDOWN">
 <doc>Closes all open browsers and resets the browser cache.</doc>
-<status status="PASS" start="2024-04-23T09:12:46.906366" elapsed="6.312365"/>
+<status status="PASS" start="2024-04-23T11:38:03.037384" elapsed="6.293627"/>
 </kw>
-<status status="PASS" start="2024-04-23T09:12:15.988459" elapsed="37.230272"/>
+<status status="PASS" start="2024-04-23T11:37:41.084541" elapsed="28.246470"/>
 </suite>
 <statistics>
 <total>
