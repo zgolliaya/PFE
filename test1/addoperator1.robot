@@ -1,7 +1,7 @@
 *** Settings ***
 Library    SeleniumLibrary
 Resource    login.robot
-variables  ${CURDIR}/lacators.py
+variables  D:/PFE/test1/lacators.py
 *** Variables ***
 ${first_name}=  Aya
 ${last_name}=    Zgolli
@@ -11,17 +11,29 @@ ${REPEATPASSWORD} =  123ZAAA
 ${Contract} =  1
 ${CONSUMER} =  205
 ${ashierPassword} =     4711
+*** Test Cases ***
+logintest
+   [tags]    userpassword
+    Set Selenium Timeout    10s
+    Access Web Page With Authentication
+addoperatortest
+     [tags]     addop
+     Set Selenium Timeout    10s
+     sleep  5s
+    Add Operators   ${first_name}    ${last_name}    ${username1}    ${password1}    ${REPEATPASSWORD}    ${Contract}   ${CONSUMER}    ${ashierPassword}  
+    sleep    5s
 *** Keywords ***
 Add Operators
   [Arguments]    ${first_name}    ${last_name}    ${username1}    ${password1}    ${REPEATPASSWORD}    ${Contract}   ${CONSUMER}    ${ashierPassword}  
   #Operators
-   Wait Until Element Is Visible           ${operatorsbutton} 
-   Click Element    ${operatorsbutton}   
+  Wait Until Element Is Visible     ${Operatorsbutton}   
+  Wait Until Page Contains Element           ${Operatorsbutton} 
+  Click Element    ${Operatorsbutton}   
   Sleep    1s
   #ADD operators
-  Wait Until Element Is Visible   ${addoperators}  
+  Wait Until Element Is Visible   ${ADDoperators}  
   Sleep  1s
-  Click Element   ${addoperators} 
+  Click Element   ${ADDoperators} 
   Sleep   1s
   #Profile
   Input Text    ${firstnameop}   ${FIRSTNAME}
@@ -35,8 +47,8 @@ Add Operators
   Input Password   ${repeatpassop}  ${REPEATPASSWORD}
   Sleep  1s
   #Carpark & Features
-  Wait Until Element Is Visible   ${carparkFeaturesop}
-  Click Element   ${carparkFeaturesop}
+  Wait Until Element Is Visible   ${CarparkFeaturesop}
+  Click Element   ${CarparkFeaturesop}
   Sleep  1s
   #CarPark
   Click Element   ${carparkop}
@@ -60,17 +72,17 @@ Add Operators
   Click Element    ${payment}
   Sleep  1s
   #Validation
-  Click Element   ${grantedfeaturesop}
+  Click Element   ${GRANTEDFEATURESop}
   Sleep  1s
   Click Element    ${validation}
   Sleep  1s
   #Production
-  Click Element  ${grantedfeaturesop}
+  Click Element  ${GRANTEDFEATURESop}
   Sleep  1s
    Click Element   ${production}
   Sleep  1s
   #Device control
-  Click Element    ${grantedfeaturesop}
+  Click Element    ${GRANTEDFEATURESop}
   Sleep  1s
   Click Element   ${devicecontrol1}
   Sleep  1s
@@ -139,11 +151,6 @@ Add Operators
     
      Click Element    ${checkbox27}
   
-   
-
-
-
-
   #Save
    ${element}=    Get WebElement      ${saveop}
   Scroll Element Into View    ${element}
@@ -153,4 +160,5 @@ Add Operators
    Wait Until Element Is Visible    ${buttonop}
    Click Element   ${buttonop}
    Sleep  1s
+
    
