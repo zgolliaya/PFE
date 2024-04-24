@@ -6,14 +6,14 @@ variables  ${CURDIR}/lacators.py
 ${first_name}=  Aya
 ${last_name}=    Zgolli
 ${username1}=    AyaZG
-${password}=  123ZAAA
+${password1}=  123ZAAA
 ${REPEATPASSWORD} =  123ZAAA   
 ${Contract} =  1
 ${CONSUMER} =  205
 ${ashierPassword} =     4711
 *** Keywords ***
 Add Operators
-  [Arguments]    ${first_name}    ${last_name}    ${username1}    ${password}    ${REPEATPASSWORD}    ${Contract}   ${CONSUMER}    ${ashierPassword}  
+  [Arguments]    ${first_name}    ${last_name}    ${username1}    ${password1}    ${REPEATPASSWORD}    ${Contract}   ${CONSUMER}    ${ashierPassword}  
   #Operators
    Wait Until Element Is Visible           ${operatorsbutton} 
    Click Element    ${operatorsbutton}   
