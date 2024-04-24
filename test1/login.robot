@@ -7,7 +7,11 @@ ${USERNAME}        Admin
 ${PASSWORD}        Admin123
 *** Keywords ***
 Access Web Page With Authentication
-    Open Browser    ${LOGIN_URL}       Chrome       
+   ${options}=  Evaluate  sys.modules['selenium.webdriver'].ChromeOptions()  sys
+    Call Method  ${options}  add_argument  --no-sandbox
+    Call Method  ${options}  add_argument  --headless
+    Open Browser    ${LOGIN_URL}       Chrome     options=${options}  
+
     Maximize Browser Window
     sleep      2s 
     Input Text    ${usernamexpath}   ${USERNAME}
