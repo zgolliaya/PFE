@@ -15,7 +15,7 @@ ${ashierPassword} =     4711
 Add Operators
   [Arguments]    ${first_name}    ${last_name}    ${username1}    ${password}    ${REPEATPASSWORD}    ${Contract}   ${CONSUMER}    ${ashierPassword}  
   #Operators
-  Wait Until Keyword Succeeds    60s    5s    Wait Until Element Is Visible    ${Operatorsbutton}    timeout=10s
+  Wait Until Page Contains Element           ${Operatorsbutton} 
   Click Element    ${Operatorsbutton}   
   Sleep    1s
   #ADD operators
