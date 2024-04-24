@@ -15,6 +15,9 @@ ${ashierPassword} =     4711
 Add Operators
   [Arguments]    ${first_name}    ${last_name}    ${username1}    ${password}    ${REPEATPASSWORD}    ${Contract}   ${CONSUMER}    ${ashierPassword}  
   #Operators
+   Wait Until Element Is Visible           ${flechebutton} 
+   Click Element    ${flechebutton}   
+    Sleep    1s
    Wait Until Element Is Visible           ${operatorsbutton} 
    Click Element    ${operatorsbutton}   
   Sleep    1s
