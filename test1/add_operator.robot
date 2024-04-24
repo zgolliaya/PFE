@@ -15,6 +15,8 @@ logintest
     Access Web Page With Authentication
 addoperatortest
      [tags]     addop
+    Set Selenium Timeout    10s
+    Access Web Page With Authentication
      Set Selenium Timeout    20s
      sleep  10s
     Add Operators   ${first_name}    ${last_name}    ${username1}    ${password}    ${REPEATPASSWORD}    ${Contract}   ${CONSUMER}    ${ashierPassword}  
