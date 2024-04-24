@@ -17,8 +17,11 @@ pipeline {
                sh "  apt-get install -y chromium-driver "
                sh "robot ./test1/addopexcel.robot"
 
+<<<<<<< HEAD
               // sh "robot ./test1/addopexcel.robot"
 
+=======
+>>>>>>> abee8014d44567c5db538443aba6289514e2628f
                 
             }
         }
@@ -32,8 +35,13 @@ pipeline {
     outputPath :'./',
     outputFileName : "*.xml",
     disableArchiveOutput : false,
+<<<<<<< HEAD
     passThreshold : 100,
     unstableThreshold: 95.0,
+=======
+    passThreshold : 0,
+    unstableThreshold: 0,
+>>>>>>> abee8014d44567c5db538443aba6289514e2628f
     otherFiles : "*.png",
 ])
       }
@@ -41,5 +49,8 @@ pipeline {
   }
     
 }
+<<<<<<< HEAD
 
       
+=======
+>>>>>>> abee8014d44567c5db538443aba6289514e2628f
