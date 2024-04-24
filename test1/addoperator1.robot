@@ -1,7 +1,7 @@
 *** Settings ***
 Library    SeleniumLibrary
 Resource    login.robot
-variables  D:/PFE/test1/lacators.py
+variables  ${CURDIR}/test1/lacators.py
 *** Variables ***
 ${first_name}=  Aya
 ${last_name}=    Zgolli
