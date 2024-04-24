@@ -11,17 +11,7 @@ ${REPEATPASSWORD} =  123ZAAA
 ${Contract} =  1
 ${CONSUMER} =  205
 ${ashierPassword} =     4711
-*** Test Cases ***
-logintest
-   [tags]    userpassword
-    Set Selenium Timeout    10s
-    Access Web Page With Authentication
-addoperatortest
-     [tags]     addop
-     Set Selenium Timeout    10s
-     sleep  5s
-    Add Operators   ${first_name}    ${last_name}    ${username1}    ${password1}    ${REPEATPASSWORD}    ${Contract}   ${CONSUMER}    ${ashierPassword}  
-    sleep    5s
+
 *** Keywords ***
 Add Operators
   [Arguments]    ${first_name}    ${last_name}    ${username1}    ${password1}    ${REPEATPASSWORD}    ${Contract}   ${CONSUMER}    ${ashierPassword}  
