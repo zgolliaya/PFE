@@ -15,13 +15,13 @@ ${ashierPassword} =     4711
 Add Operators
   [Arguments]    ${first_name}    ${last_name}    ${username1}    ${password}    ${REPEATPASSWORD}    ${Contract}   ${CONSUMER}    ${ashierPassword}  
   #Operators
-   Wait Until Element Is Visible           ${Operatorsbutton} 
-   Click Element    ${Operatorsbutton}   
+   Wait Until Element Is Visible           ${operatorsbutton} 
+   Click Element    ${operatorsbutton}   
   Sleep    1s
   #ADD operators
-  Wait Until Element Is Visible   ${ADDoperators}  
+  Wait Until Element Is Visible   ${addoperators}  
   Sleep  1s
-  Click Element   ${ADDoperators} 
+  Click Element   ${addoperators} 
   Sleep   1s
   #Profile
   Input Text    ${firstnameop}   ${FIRSTNAME}
@@ -35,8 +35,8 @@ Add Operators
   Input Password   ${repeatpassop}  ${REPEATPASSWORD}
   Sleep  1s
   #Carpark & Features
-  Wait Until Element Is Visible   ${CarparkFeaturesop}
-  Click Element   ${CarparkFeaturesop}
+  Wait Until Element Is Visible   ${carparkFeaturesop}
+  Click Element   ${carparkFeaturesop}
   Sleep  1s
   #CarPark
   Click Element   ${carparkop}
@@ -60,17 +60,17 @@ Add Operators
   Click Element    ${payment}
   Sleep  1s
   #Validation
-  Click Element   ${GRANTEDFEATURESop}
+  Click Element   ${grantedfeaturesop}
   Sleep  1s
   Click Element    ${validation}
   Sleep  1s
   #Production
-  Click Element  ${GRANTEDFEATURESop}
+  Click Element  ${grantedfeaturesop}
   Sleep  1s
    Click Element   ${production}
   Sleep  1s
   #Device control
-  Click Element    ${GRANTEDFEATURESop}
+  Click Element    ${grantedfeaturesop}
   Sleep  1s
   Click Element   ${devicecontrol1}
   Sleep  1s
