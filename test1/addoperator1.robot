@@ -15,8 +15,10 @@ ${ashierPassword} =     4711
 Add Operators
   [Arguments]    ${first_name}    ${last_name}    ${username1}    ${password}    ${REPEATPASSWORD}    ${Contract}   ${CONSUMER}    ${ashierPassword}  
   #Operators
-  Wait Until Page Contains Element           ${Operatorsbutton} 
-  Click Element    ${Operatorsbutton}   
+  Get WebElement     ${Operatorsbutton}
+  Execute JavaScript    arguments[0].click();    ${Operatorsbutton}
+  #  Wait Until Page Contains Element           ${Operatorsbutton} 
+  #Click Element    ${Operatorsbutton}   
   Sleep    1s
   #ADD operators
   Wait Until Element Is Visible   ${ADDoperators}  
