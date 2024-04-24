@@ -15,7 +15,7 @@ pipeline {
                sh "pip install robotframework-seleniumlibrary"
                sh "  apt-get update -y "
                sh "  apt-get install -y chromium-driver "
-               sh "robot ./test1/*.robot"
+               sh "robot ./test1/addopexcel.robot"
 
               // sh "robot ./test1/addopexcel.robot"
 
