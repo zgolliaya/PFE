@@ -15,6 +15,7 @@ ${Contract} =  1
 ${CONSUMER} =  205
 ${ashierPassword} =     4711
 #${operatorsbutton1}=  //span[text()='Operators']  # XPath for the 'Operators' element
+  ${windowId}=    kt_app_sidebar_menu_scroll
 
 
 *** Test Cases ***
@@ -45,7 +46,7 @@ Add Operators
     Click Element   ${continuebutton}
     sleep      4s  
     # Get the window handle before switching
-     ${windowId}=    kt_app_sidebar_menu_scroll
+   
 
     # Now you have the windowId, you can switch to that window
      Select Window    ${windowId}
