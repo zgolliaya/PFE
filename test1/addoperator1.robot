@@ -14,7 +14,7 @@ ${REPEATPASSWORD} =  123ZAAA
 ${Contract} =  1
 ${CONSUMER} =  205
 ${ashierPassword} =     4711
-${operatorsbutton}=    Operators
+${operatorsbutton}    //span[contains(text(),'Operators')]
 
 *** Test Cases ***
 addoperatortest
