@@ -1,8 +1,11 @@
 *** Settings ***
 Library    SeleniumLibrary
-Resource    login.robot
-variables  ${CURDIR}/lacators.py
+#Resource    login.robot
+variables  D:/PFE/test1/lacators.py
 *** Variables ***
+${LOGIN_URL}       https://b2b-frontend.dev3.addinn-group.com/auth/login
+${USERNAME}        Admin
+${PASSWORD}        Admin123
 ${first_name}=  Aya
 ${last_name}=    Zgolli
 ${username1}=    AyaZG
@@ -11,8 +14,29 @@ ${REPEATPASSWORD} =  123ZAAA
 ${Contract} =  1
 ${CONSUMER} =  205
 ${ashierPassword} =     4711
-
+*** Test Cases ***
+logintest
+   [tags]    userpassword
+    Set Selenium Timeout    10s
+    Access Web Page With Authentication
+addoperatortest
+     [tags]     addop
+     Set Selenium Timeout    10s
+     sleep  5s
+    Add Operators   ${first_name}    ${last_name}    ${username1}    ${password1}    ${REPEATPASSWORD}    ${Contract}   ${CONSUMER}    ${ashierPassword}  
+    sleep    5s
 *** Keywords ***
+Access Web Page With Authentication
+    Open Browser    ${LOGIN_URL}       Chrome       
+    Maximize Browser Window
+    sleep      2s 
+    Input Text    ${usernamexpath}   ${USERNAME}
+    sleep      2s 
+    Input Password    ${passwordxpath}   ${PASSWORD}
+    sleep      2s 
+    Click Element   ${continuebutton}
+    sleep      4s 
+
 Add Operators
   [Arguments]    ${first_name}    ${last_name}    ${username1}    ${password1}    ${REPEATPASSWORD}    ${Contract}   ${CONSUMER}    ${ashierPassword}  
   #Operators
@@ -150,5 +174,6 @@ Add Operators
    Wait Until Element Is Visible    ${buttonop}
    Click Element   ${buttonop}
    Sleep  1s
+
 
    
