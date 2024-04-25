@@ -27,8 +27,9 @@ Add Operators
   [Arguments]    ${first_name}    ${last_name}    ${username1}    ${password1}    ${REPEATPASSWORD}    ${Contract}   ${CONSUMER}    ${ashierPassword}  
   #Operators
     ${options}  Configure Browser Options
-    SeleniumLibrary.Open Browser  ${LOGIN_URL}   Chrome  options=${options}
-    SeleniumLibrary.Set Window Size  1920  1080 
+
+    SeleniumLibrary.Open Browser    ${LOGIN_URL}    chromium    options=${options}
+    SeleniumLibrary.Set Window Size    1920    1080
     Maximize Browser Window
     sleep      2s 
     Input Text    ${usernamexpath}   ${USERNAME}
@@ -172,11 +173,22 @@ Add Operators
    Click Element   ${buttonop}
    Sleep  1s
 Configure Browser Options
-    ${options}  Evaluate  sys.modules['selenium.webdriver'].ChromeOptions()  sys , selenium.webdriver
-    Call Method  ${options}  add_argument  --no-sandbox
-    Call Method  ${options}  add_argument  --headless
-    Call Method  ${options}  add_argument  --disable-dev-shm-usage
-#    Call Method  ${options}  add_argument    --disable-gpu
-#    Call Method  ${options}  add_argument    --disable-extensions
-#    Call Method  ${options}  add_argument    --ignore-certificate-e
+    ${options}=    Evaluate    sys.modules['selenium.webdriver'].ChromeOptions()    sys
+    Call Method    ${options}    add_argument    --disable-gpu
+    Call Method    ${options}    add_argument    --no-sandbox
+    Call Method    ${options}    add_argument    --disable-dev-shm-usage
+    Call Method    ${options}    add_argument    --headless
+    Call Method    ${options}    add_argument    --disable-infobars
+    Call Method    ${options}    add_argument    --window-size=1920,1080
+    Call Method    ${options}    add_argument    --disable-extensions
+    Call Method    ${options}    add_argument    --disable-setuid-sandbox
+    Call Method    ${options}    add_argument    --remote-debugging-port=9222
+    Call Method    ${options}    add_argument    --disable-popup-blocking
+    Call Method    ${options}    add_argument    --disable-translate
+    Call Method    ${options}    add_argument    --disable-notifications
+    Call Method    ${options}    add_argument    --no-first-run
+    Call Method    ${options}    add_argument    --ignore-certificate-errors
+    Call Method    ${options}    add_argument    --ignore-ssl-errors
+    Call Method    ${options}    add_argument    --ignore-certificate-errors-spki-list
+
    
