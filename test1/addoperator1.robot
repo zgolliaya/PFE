@@ -44,8 +44,8 @@ Add Operators
     sleep      2s 
     Click Element   ${continuebutton}
     sleep      4s  
-    Execute JavaScript  arguments[0].scrollIntoView(true);  arguments[1].click();
-   ...  ${operatorsbutton1}
+    Wait Until Element Is Visible    ${operatorsbutton1}    # Wait for the element to become visible
+    Execute JavaScript    arguments[0].scrollIntoView(true);  arguments[1].click();    ${operatorsbutton1}
 
     Sleep    1s
   #ADD operators
