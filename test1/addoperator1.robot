@@ -44,8 +44,11 @@ Add Operators
     sleep      2s 
     Click Element   ${continuebutton}
     sleep      4s  
-    Wait Until Element Is Visible    ${operatorsbutton1}    # Wait for the element to become visible
-    Execute JavaScript    arguments[0].scrollIntoView(true);  arguments[1].click();    ${operatorsbutton1}
+    ${shadow_host}=  Get WebElement  css:div.shadow-host
+    ${shadow_root}=  Execute Javascript  return arguments[0].shadowRoot  ${shadow_host}
+    Switch To Shadow DOM  ${shadow_root}
+    Click Element       //span[text()='Operators']
+
 
     Sleep    1s
   #ADD operators
