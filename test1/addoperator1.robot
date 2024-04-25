@@ -29,7 +29,7 @@ Add Operators
   #Operators
    ${options}  Evaluate  sys.modules['selenium.webdriver'].ChromeOptions()  sys
     Call Method  ${options}  add_argument  --no-sandbox
-    Call Method  ${options}  add_argument  --headless
+    #Call Method  ${options}  add_argument  --headless
     Open Browser  ${LOGIN_URL}    Chrome     options=${options}
     Maximize Browser Window
     sleep      2s 
