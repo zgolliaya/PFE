@@ -3,7 +3,7 @@ usernamexpath="xpath=//input[contains(@formcontrolname,'username')] "
 passwordxpath="xpath=//input[contains(@formcontrolname,'password')]"
 continuebutton="xpath=//button[contains(@class,'btn btn-primary')] "
 #ADD operator
-operatorsbutton1="xpath=//span[text()='Operators']"
+#operatorsbutton1="xpath=//span[text()='Operators']"
 addoperators="xpath=//button[contains(@routerlink,'user')]"
 firstnameop="xpath=//input[@formcontrolname='firstname'] "
 lastnameop="xpath=//input[@formcontrolname='lastname'] "
