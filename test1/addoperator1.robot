@@ -41,9 +41,7 @@ Add Operators
     Input Password    ${passwordxpath}   ${PASSWORD}
     sleep      2s 
     Click Element   ${continuebutton}
-    sleep      4s 
-Add Operators
-  [Arguments]    ${first_name}    ${last_name}    ${username1}    ${password1}    ${REPEATPASSWORD}    ${Contract}   ${CONSUMER}    ${ashierPassword}  
+    sleep      4s  
    # Wait Until Element Is Visible     ${operatorsbutton1}   
    Wait Until Page Contains Element           ${operatorsbutton1} 
     Click Element    ${operatorsbutton1}   
