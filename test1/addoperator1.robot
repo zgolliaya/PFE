@@ -49,7 +49,7 @@ Add Operators
    
 
     # Now you have the windowId, you can switch to that window
-     Select Window    ${windowId}
+    Switch Window    ${windowId}
     # Wait until the element is visible
     Wait Until Element Is Visible    ${operatorsbutton1}
 
