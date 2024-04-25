@@ -45,9 +45,9 @@ Access Web Page With Authentication
 Add Operators
   [Arguments]    ${first_name}    ${last_name}    ${username1}    ${password1}    ${REPEATPASSWORD}    ${Contract}   ${CONSUMER}    ${ashierPassword}  
   #Operators
-  Wait Until Element Is Visible     ${Operatorsbutton}   
-  Wait Until Page Contains Element           ${Operatorsbutton} 
-  Click Element    ${Operatorsbutton}   
+  Wait Until Element Is Visible     ${operatorsbutton}   
+  Wait Until Page Contains Element           ${operatorsbutton} 
+  Click Element    ${operatorsbutton}   
   Sleep    1s
   #ADD operators
   Wait Until Element Is Visible   ${ADDoperators}  
