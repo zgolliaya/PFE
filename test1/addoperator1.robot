@@ -14,7 +14,7 @@ ${REPEATPASSWORD} =  123ZAAA
 ${Contract} =  1
 ${CONSUMER} =  205
 ${ashierPassword} =     4711
-${operatorsbutton1}=  //span[text()='Operators']  # XPath for the 'Operators' element
+#${operatorsbutton1}=  //span[text()='Operators']  # XPath for the 'Operators' element
 
 
 *** Test Cases ***
@@ -45,6 +45,7 @@ Add Operators
     Click Element   ${continuebutton}
     sleep      4s  
     Wait Until Element Is Visible   ${operatorsbutton1}  
+    Execute JavaScript $("#Operators").click();
     Click Element       ${operatorsbutton1}  
 
 
