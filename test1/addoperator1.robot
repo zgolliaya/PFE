@@ -182,13 +182,13 @@ Configure Browser Options
     #Call Method    ${options}    add_argument    --window-size=1920,1080
     Call Method    ${options}    add_argument    --disable-extensions
     Call Method    ${options}    add_argument    --disable-setuid-sandbox
-    Call Method    ${options}    add_argument    --remote-debugging-port=9222
-    Call Method    ${options}    add_argument    --disable-popup-blocking
-    Call Method    ${options}    add_argument    --disable-translate
-    Call Method    ${options}    add_argument    --disable-notifications
-    Call Method    ${options}    add_argument    --no-first-run
-    Call Method    ${options}    add_argument    --ignore-certificate-errors
-    Call Method    ${options}    add_argument    --ignore-ssl-errors
-    Call Method    ${options}    add_argument    --ignore-certificate-errors-spki-list
+    #Call Method    ${options}    add_argument    --remote-debugging-port=9222
+    #Call Method    ${options}    add_argument    --disable-popup-blocking
+    #Call Method    ${options}    add_argument    --disable-translate
+    #Call Method    ${options}    add_argument    --disable-notifications
+    #Call Method    ${options}    add_argument    --no-first-run
+    #Call Method    ${options}    add_argument    --ignore-certificate-errors
+    #Call Method    ${options}    add_argument    --ignore-ssl-errors
+    #Call Method    ${options}    add_argument    --ignore-certificate-errors-spki-list
 
    
