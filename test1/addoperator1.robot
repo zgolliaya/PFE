@@ -14,7 +14,7 @@ ${REPEATPASSWORD} =  123ZAAA
 ${Contract} =  1
 ${CONSUMER} =  205
 ${ashierPassword} =     4711
-${operatorsbutton1}=  Set Variable  //span[text()='Operators']  # XPath for the 'Operators' element
+${operatorsbutton1}= //span[text()='Operators']  # XPath for the 'Operators' element
 
 *** Test Cases ***
 addoperatortest
