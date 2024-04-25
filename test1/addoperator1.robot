@@ -29,7 +29,7 @@ Add Operators
     ${options}  Configure Browser Options
 
     SeleniumLibrary.Open Browser    ${LOGIN_URL}    chromium    options=${options}
-    SeleniumLibrary.Set Window Size    1920    1080
+    #SeleniumLibrary.Set Window Size    1920    1080
     Maximize Browser Window
     sleep      2s 
     Input Text    ${usernamexpath}   ${USERNAME}
