@@ -44,7 +44,7 @@ Add Operators
     Click Element   ${continuebutton}
     sleep      4s  
     Execute JavaScript  arguments[0].scrollIntoView(true);  ${operatorsbutton1}
-    Click Element  //span[text()='Operators']
+    Click Element     ${operatorsbutton1}
     Sleep    1s
   #ADD operators
   Wait Until Element Is Visible   ${ADDoperators}  
