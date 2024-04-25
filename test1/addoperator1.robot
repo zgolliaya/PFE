@@ -15,7 +15,7 @@ ${Contract} =  1
 ${CONSUMER} =  205
 ${ashierPassword} =     4711
 #${operatorsbutton1}=  //span[text()='Operators']  # XPath for the 'Operators' element
-  ${windowId}=    kt_app_sidebar_menu_scroll
+${windowId}=    kt_app_sidebar_menu_scroll
 
 
 *** Test Cases ***
