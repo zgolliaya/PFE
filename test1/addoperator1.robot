@@ -26,10 +26,9 @@ addoperatortest
 Add Operators
   [Arguments]    ${first_name}    ${last_name}    ${username1}    ${password1}    ${REPEATPASSWORD}    ${Contract}   ${CONSUMER}    ${ashierPassword}  
   #Operators
-   ${options}=  Evaluate  sys.modules['selenium.webdriver'].ChromeOptions()  sys
-    Call Method  ${options}  add_argument  --no-sandbox
-    Call Method  ${options}  add_argument  --headless
-    Open Browser    ${LOGIN_URL}       Chrome     options=${options}  
+    ${options}  Configure Browser Options
+    SeleniumLibrary.Open Browser  ${LOGIN_URL}   Chrome  options=${options}
+    SeleniumLibrary.Set Window Size  1920  1080 
     Maximize Browser Window
     sleep      2s 
     Input Text    ${usernamexpath}   ${USERNAME}
@@ -172,5 +171,12 @@ Add Operators
    Wait Until Element Is Visible    ${buttonop}
    Click Element   ${buttonop}
    Sleep  1s
-
+Configure Browser Options
+    ${options}  Evaluate  sys.modules['selenium.webdriver'].ChromeOptions()  sys , selenium.webdriver
+    Call Method  ${options}  add_argument  --no-sandbox
+    Call Method  ${options}  add_argument  --headless
+    Call Method  ${options}  add_argument  --disable-dev-shm-usage
+#    Call Method  ${options}  add_argument    --disable-gpu
+#    Call Method  ${options}  add_argument    --disable-extensions
+#    Call Method  ${options}  add_argument    --ignore-certificate-e
    
