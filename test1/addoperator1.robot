@@ -15,41 +15,28 @@ ${Contract} =  1
 ${CONSUMER} =  205
 ${ashierPassword} =     4711
 *** Test Cases ***
-logintest
-   [tags]    userpassword
-    Set Selenium Timeout    10s
-    Access Web Page With Authentication
 addoperatortest
      [tags]     addop
      Set Selenium Timeout    10s
      sleep  5s
     Add Operators   ${first_name}    ${last_name}    ${username1}    ${password1}    ${REPEATPASSWORD}    ${Contract}   ${CONSUMER}    ${ashierPassword}  
     sleep    5s
-*** Keywords ***
-Access Web Page With Authentication
-   ${options}=  Evaluate  sys.modules['selenium.webdriver'].ChromeOptions()  sys
-    Call Method  ${options}  add_argument  --no-sandbox
-    Call Method  ${options}  add_argument  --headless
-    Open Browser    ${LOGIN_URL}       Chrome     options=${options}  
-
+*** Keywords **
+Add Operators
+  [Arguments]    ${first_name}    ${last_name}    ${username1}    ${password1}    ${REPEATPASSWORD}    ${Contract}   ${CONSUMER}    ${ashierPassword}  
+  #Operators
+    Open Browser    ${LOGIN_URL}       Chrome       
     Maximize Browser Window
     sleep      2s 
-    Input Text    ${usernamexpath}   ${USERNAME}
     Input Text    ${usernamexpath}   ${USERNAME}
     sleep      2s 
     Input Password    ${passwordxpath}   ${PASSWORD}
     sleep      2s 
     Click Element   ${continuebutton}
     sleep      4s 
-
-Add Operators
-  [Arguments]    ${first_name}    ${last_name}    ${username1}    ${password1}    ${REPEATPASSWORD}    ${Contract}   ${CONSUMER}    ${ashierPassword}  
-  #Operators
-  ${check_element}=  Run Keyword and Return Status   Wait Until Page Contains Element     ${operatorsbutton}    10s
-  Run Keyword If      '${check_element}' == 'True'     Click Element    ${operatorsbutton}
-  # Wait Until Element Is Visible     ${operatorsbutton}   
-  # Wait Until Page Contains Element           ${operatorsbutton} 
-  # Click Element    ${operatorsbutton}   
+  Wait Until Element Is Visible     ${Operatorsbutton}   
+  Wait Until Page Contains Element           ${Operatorsbutton} 
+  Click Element    ${Operatorsbutton}   
   Sleep    1s
   #ADD operators
   Wait Until Element Is Visible   ${ADDoperators}  
@@ -181,6 +168,5 @@ Add Operators
    Wait Until Element Is Visible    ${buttonop}
    Click Element   ${buttonop}
    Sleep  1s
-
 
    
