@@ -44,6 +44,11 @@ Add Operators
     sleep      2s 
     Click Element   ${continuebutton}
     sleep      4s  
+    # Get the window handle before switching
+     ${windowId}=    kt_app_sidebar_menu_scroll
+
+    # Now you have the windowId, you can switch to that window
+     Select Window    ${windowId}
     # Wait until the element is visible
     Wait Until Element Is Visible    ${operatorsbutton1}
 
@@ -53,11 +58,7 @@ Add Operators
     # Click the element using XPath
     Click Element    ${operatorsbutton1}
 
-    # Get the window handle before switching
-     ${windowId}=    kt_app_sidebar_menu_scroll
-
-    # Now you have the windowId, you can switch to that window
-     Select Window    ${windowId}
+   
   
 
 
