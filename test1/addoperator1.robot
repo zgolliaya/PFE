@@ -42,8 +42,8 @@ Add Operators
     sleep      2s 
     Click Element   ${continuebutton}
     sleep      4s  
-   # Wait Until Element Is Visible     ${operatorsbutton1}   
-   Wait Until Page Contains Element           ${operatorsbutton1} 
+     Wait Until Element Is Visible     ${operatorsbutton1}   
+    #Wait Until Page Contains Element           ${operatorsbutton1} 
     Click Element    ${operatorsbutton1}   
     Sleep    1s
   #ADD operators
