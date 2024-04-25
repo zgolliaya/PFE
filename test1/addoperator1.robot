@@ -29,7 +29,7 @@ Add Operators
     ${options}  Configure Browser Options
 
     SeleniumLibrary.Open Browser    ${LOGIN_URL}    chromium    options=${options}
-    #SeleniumLibrary.Set Window Size    1920    1080
+    SeleniumLibrary.Set Window Size    1920    1080
     Maximize Browser Window
     sleep      2s 
     Input Text    ${usernamexpath}   ${USERNAME}
@@ -179,7 +179,7 @@ Configure Browser Options
     Call Method    ${options}    add_argument    --disable-dev-shm-usage
     Call Method    ${options}    add_argument    --headless
     Call Method    ${options}    add_argument    --disable-infobars
-    Call Method    ${options}    add_argument    --window-size=1920,1080
+    #Call Method    ${options}    add_argument    --window-size=1920,1080
     Call Method    ${options}    add_argument    --disable-extensions
     Call Method    ${options}    add_argument    --disable-setuid-sandbox
     Call Method    ${options}    add_argument    --remote-debugging-port=9222
