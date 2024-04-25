@@ -14,9 +14,7 @@ ${REPEATPASSWORD} =  123ZAAA
 ${Contract} =  1
 ${CONSUMER} =  205
 ${ashierPassword} =     4711
-#${operatorsbutton1}=  //span[text()='Operators']  # XPath for the 'Operators' element
-${windowId}=    kt_app_sidebar_menu_scroll
-
+${operatorsbutton}     //span[contains(text(),'Operators')]
 
 *** Test Cases ***
 addoperatortest
@@ -30,13 +28,9 @@ Add Operators
   [Arguments]    ${first_name}    ${last_name}    ${username1}    ${password1}    ${REPEATPASSWORD}    ${Contract}   ${CONSUMER}    ${ashierPassword}  
   #Operators
    ${options}  Evaluate  sys.modules['selenium.webdriver'].ChromeOptions()  sys
-    Call Method  ${options}  add_argument  --disable-notifications
-    Call Method  ${options}  add_argument  --disable-infobars
-    Call Method  ${options}  add_argument  --disable-extensions
     Call Method  ${options}  add_argument  --no-sandbox
     Call Method  ${options}  add_argument  --headless
-    Call Method  ${options}  add_argument  --disable-dev-shm-usage
-    SeleniumLibrary.Open Browser  ${LOGIN_URL}  Chrome  options=${options}
+    Open Browser  ${LOGIN_URL}    Chrome     options=${options}
     Maximize Browser Window
     sleep      2s 
     Input Text    ${usernamexpath}   ${USERNAME}
@@ -45,24 +39,10 @@ Add Operators
     sleep      2s 
     Click Element   ${continuebutton}
     sleep      4s  
-    # Get the window handle before switching
-   
-
-    # Now you have the windowId, you can switch to that window
-    Switch Window    ${windowId}
-    # Wait until the element is visible
-    Wait Until Element Is Visible    ${operatorsbutton1}
-
-    # Execute JavaScript to perform a click
-    Execute JavaScript    $("#Operators").click();
-
+    Wait Until Element Is Visible    ${operatorsbutton}
+    Wait Until Page Contains Element           ${operatorsbutton} 
     # Click the element using XPath
-    Click Element    ${operatorsbutton1}
-
-   
-  
-
-
+    Click Element    ${operatorsbutton}
     Sleep    1s
   #ADD operators
   Wait Until Element Is Visible   ${ADDoperators}  
