@@ -14,8 +14,8 @@ ${REPEATPASSWORD} =  123ZAAA
 ${Contract} =  1
 ${CONSUMER} =  205
 ${ashierPassword} =     4711
-${operatorsbutton}    //span[contains(text(),'Operators')]
-
+#${operatorsbutton}    //span[contains(text(),'Operators')
+${operatorsbutton}     //*[@id="#kt_app_sidebar_menu"]/div[2]/a/span[2]
 *** Test Cases ***
 addoperatortest
      [tags]     addop
