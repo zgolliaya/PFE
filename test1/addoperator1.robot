@@ -39,6 +39,7 @@ Add Operators
     sleep      2s 
     Click Element   ${continuebutton}
     sleep      4s  
+    Maximize Browser Window
     Wait Until Element Is Visible           ${op}
     #Wait Until Page Contains Element          
     Click Element             ${op}
