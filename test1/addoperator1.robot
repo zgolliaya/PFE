@@ -42,7 +42,7 @@ Add Operators
     ${x}=     Get Horizontal Position         ${op}
     ${y}=      Get Vertical Position           ${op}
     Execute Javascript  window.scrollTo(${x}, ${y})
-    Scroll To Element  ${op}
+    #Scroll To Element  ${op}
     Click Element       ${op}
     #Wait Until Element Is Visible           ${op}
     #Wait Until Page Contains Element          
