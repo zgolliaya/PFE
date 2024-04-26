@@ -39,10 +39,10 @@ Add Operators
     sleep      2s 
     Click Element   ${continuebutton}
     sleep      4s  
-    Wait Until Element Is Visible       //*[@id="#kt_app_sidebar_menu"]/div[2]/a/span[2]
-    #Wait Until Page Contains Element          //*[@id="#kt_app_sidebar_menu"]/div[2]/a/span[2]
+    Wait Until Element Is Visible           ${operatorsbutton}
+    #Wait Until Page Contains Element          
     # Click the element using XPath
-    Click Element     //*[@id="#kt_app_sidebar_menu"]/div[2]/a/span[2]
+    Click Element             ${operatorsbutton}
     Sleep    1s
   #ADD operators
   Wait Until Element Is Visible   ${ADDoperators}  
