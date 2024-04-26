@@ -40,6 +40,7 @@ Add Operators
     Click Element   ${continuebutton}
     sleep      4s  
     Maximize Browser Window
+    Execute JavaScript    window.scrollTo(-document.body.scrollWidth, 0)
     Wait Until Element Is Visible           ${op}
     #Wait Until Page Contains Element          
     Click Element             ${op}
