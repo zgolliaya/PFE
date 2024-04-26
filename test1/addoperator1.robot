@@ -39,7 +39,7 @@ Add Operators
     sleep      2s 
     Click Element   ${continuebutton}
     sleep      4s  
-    Scroll Element Into View              ${operatorsbutton}
+    Scroll Element Into View              ${op}
     Wait Until Element Is Visible           ${op}
     #Wait Until Page Contains Element          
     # Click the element using XPath
