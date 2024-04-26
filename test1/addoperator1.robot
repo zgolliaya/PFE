@@ -39,12 +39,11 @@ Add Operators
     sleep      2s 
     Click Element   ${continuebutton}
     sleep      4s  
-    #Execute Javascript    window.scrollTo(0,200);
-    Scroll Element Into View   ${op}
-    Wait Until Element is visible     ${op}        timeout=20s
-    Set Focus To Element    ${op}   
-    Click Element    ${op}
-    #Scroll Element Into View              ${op}
+    ${x}=     Get Horizontal Position         ${op}
+    ${y}=      Get Vertical Position           ${op}
+    Execute Javascript  window.scrollTo(${x}, ${y})
+    Scroll To Element  ${op}
+    Click Element       ${op}
     #Wait Until Element Is Visible           ${op}
     #Wait Until Page Contains Element          
     # Click the element using XPath
