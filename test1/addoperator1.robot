@@ -39,11 +39,9 @@ Add Operators
     sleep      2s 
     Click Element   ${continuebutton}
     sleep      4s  
-    #Wait Until Element Is Visible           ${op}
-    Wait Until Element Is Visible        //span[text()='Carparks']
-    Click Element                     //span[text()='Carparks']
+    Wait Until Element Is Visible           ${op}
     #Wait Until Page Contains Element          
-    #Click Element             ${op}
+    Click Element             ${op}
     Sleep    1s
    #ADD operators
    Wait Until Element Is Visible   ${ADDoperators}  
