@@ -39,30 +39,26 @@ Add Operators
     sleep      2s 
     Click Element   ${continuebutton}
     sleep      4s  
-    ${x}=     Get Horizontal Position         ${op}
-    ${y}=      Get Vertical Position           ${op}
-    Execute Javascript  window.scrollTo(${x}, ${y})
-    #Scroll To Element  ${op}
-    Click Element       ${op}
     #Wait Until Element Is Visible           ${op}
+    Wait Until Element Is Visible        //span[text()='Carparks']
+    Click Element                     //span[text()='Carparks']
     #Wait Until Page Contains Element          
-    # Click the element using XPath
     #Click Element             ${op}
     Sleep    1s
-  #ADD operators
-  Wait Until Element Is Visible   ${ADDoperators}  
-  Sleep  1s
-  Click Element   ${ADDoperators} 
-  Sleep   1s
-  #Profile
-  Input Text    ${firstnameop}   ${FIRSTNAME}
-  Sleep  1s
-  Input Text    ${lastnameop}    ${LASTNAME}
-  Sleep  1s
-  Input Text    ${usernameop}   ${username1}
-  Sleep  1s
-  Input Password  ${Passwordop}   ${PASSWORD}
-  Sleep  1s
+   #ADD operators
+   Wait Until Element Is Visible   ${ADDoperators}  
+   Sleep  1s
+   Click Element   ${ADDoperators} 
+   Sleep   1s
+   #Profile
+   Input Text    ${firstnameop}   ${FIRSTNAME}
+   Sleep  1s
+   Input Text    ${lastnameop}    ${LASTNAME}
+   Sleep  1s
+   Input Text    ${usernameop}   ${username1}
+   Sleep  1s
+   Input Password  ${Passwordop}   ${PASSWORD}
+   Sleep  1s
   Input Password   ${repeatpassop}  ${REPEATPASSWORD}
   Sleep  1s
   #Carpark & Features
