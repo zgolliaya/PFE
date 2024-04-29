@@ -39,10 +39,8 @@ Add Operators
     sleep      2s 
     Click Element   ${continuebutton}
     sleep      4s  
-    Maximize Browser Window
-    Execute JavaScript    window.scrollTo(-document.body.scrollWidth, 0)
-    Wait Until Element Is Visible                ${fleche}
-    Click Element                       ${fleche}       
+    Execute Javascript    window.open('https://b2b-frontend.dev3.addinn-group.com/dashboard')
+    Switch Window   locator=NEW    
     Wait Until Element Is Visible           ${op}
     #Wait Until Page Contains Element          
     Click Element             ${op}
