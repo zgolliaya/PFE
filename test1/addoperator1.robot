@@ -39,6 +39,7 @@ Add Operators
     sleep      2s 
     Click Element   ${continuebutton}
     sleep      4s  
+    Set Window Size    1920    1080  
     #Wait Until Element Is Visible          ${logout}
     #Mouse Over            ${logout}
    # Click Element           ${logout}
