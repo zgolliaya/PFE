@@ -39,10 +39,14 @@ Add Operators
     sleep      2s 
     Click Element   ${continuebutton}
     sleep      4s  
-    Set Window Size    1920    1080  
-    sleep   8s 
+    #Set Window Size    1920    1080  
+   # sleep   8s 
+     Set Window Size    1920    1080
+      Sleep    8s
+     Wait Until Element Is Visible    xpath=//div[@class='card-toolbar']//button[contains(text(), 'Add Operator')]
+     Click Element    xpath=//div[@class='card-toolbar']//button[contains(text(), 'Add Operator')]
 
-    Click Element At Coordinates    xpath=//div[contains(@class, 'menu-item')]//a[contains(@routerlink, '/operators')]     0    40
+    #Click Element At Coordinates    xpath=//div[contains(@class, 'menu-item')]//a[contains(@routerlink, '/operators')]     0    40
     Sleep    2s
    #ADD operators
    #Set Window Size    1920    1080
