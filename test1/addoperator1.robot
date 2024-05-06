@@ -53,11 +53,11 @@ Add Operators
   Set Window Size    1920    1080
   sleep   8s 
   #Scroll Element Into View    xpath=//button[contains(text(), 'Add Operator')]
-  Wait Until Element Is Visible      xpath=//div[contains(@class, 'd-flex justify-content-end')]//button[contains(text(), 'Add Operator')]      timeout=20s
-  Click Element        xpath=//div[contains(@class, 'd-flex justify-content-end')]//button[contains(text(), 'Add Operator')]
+  #Wait Until Element Is Visible      xpath=//div[contains(@class, 'd-flex justify-content-end')]//button[contains(text(), 'Add Operator')]      timeout=20s
+  #Click Element        xpath=//div[contains(@class, 'd-flex justify-content-end')]//button[contains(text(), 'Add Operator')]
 
 
-  # Click Element At Coordinates    //div[contains(@class, 'd-flex justify-content-end')]//button[contains(text(), 'Add Operator')]         100    100
+   Click Element At Coordinates    //div[contains(@class, 'd-flex justify-content-end')]//button[contains(text(), 'Add Operator')]         100    50
   # Wait Until Element Is Visible   ${ADDoperators}  
    Sleep  4s
    #Click Element   ${ADDoperators} 
