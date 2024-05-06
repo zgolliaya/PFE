@@ -2,6 +2,7 @@
 usernamexpath="xpath=//input[contains(@formcontrolname,'username')] "
 passwordxpath="xpath=//input[contains(@formcontrolname,'password')]"
 continuebutton="xpath=//button[contains(@class,'btn btn-primary')] "
+logout="xpath=//span[@class='fs-1 ki-duotone ki-profile-circle ng-star-inserted']/span[@class='path1 ng-star-inserted']"
 #ADD operator
 fleche="xpath=//div[contains(@class, 'app-sidebar-toggle')]"
 op="//div[contains(@class, 'menu-item') and contains(a/@routerlink, '/operators')]"
