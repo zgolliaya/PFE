@@ -43,7 +43,7 @@ Add Operators
     #Mouse Over            ${logout}
    # Click Element           ${logout}
     ${element}=    Get WebElement     xpath://span[@class='fs-1 ki-duotone ki-profile-circle ng-star-inserted']/span[@class='path1 ng-star-inserted']
-     Execute JavaScript    arguments[0].click();    ${element}
+    Click Element    ${element}
 
      sleep   4s 
     #Click Element             ${logout}
