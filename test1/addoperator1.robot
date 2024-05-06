@@ -51,6 +51,7 @@ Add Operators
     Click Element At Coordinates    xpath=//div[contains(@class, 'menu-item')]//a[contains(@routerlink, '/operators')]    100    100
     Sleep    1s
    #ADD operators
+   Set Window Size    1920    1080
    Wait Until Element Is Visible   ${ADDoperators}  
    Sleep  1s
    Click Element   ${ADDoperators} 
