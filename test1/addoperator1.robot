@@ -40,8 +40,11 @@ Add Operators
     Click Element   ${continuebutton}
     sleep      4s  
     #Wait Until Element Is Visible          ${logout}
-    Mouse Over            ${logout}
-    Click Element           ${logout}
+    #Mouse Over            ${logout}
+   # Click Element           ${logout}
+    ${element}=    Get WebElement     ${logout}
+     Execute JavaScript    arguments[0].click();    ${element}
+
      sleep   4s 
     #Click Element             ${logout}
     sleep  4s 
