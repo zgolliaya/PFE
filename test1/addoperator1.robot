@@ -52,7 +52,8 @@ Add Operators
     Sleep    1s
    #ADD operators
    Set Window Size    1920    1080
-   Click Element At Coordinates    ${ADDoperators}     100    100
+   slepp  8s 
+   Click Element At Coordinates    ${ADDoperators}         100    100
   # Wait Until Element Is Visible   ${ADDoperators}  
    Sleep  1s
    #Click Element   ${ADDoperators} 
