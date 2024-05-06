@@ -40,11 +40,9 @@ Add Operators
     Click Element   ${continuebutton}
     sleep      4s  
     #Wait Until Element Is Visible          ${logout}
-   Click Element Using JavaScript Executor
-    ${element}=    Get WebElement    ${logout}
-    Execute JavaScript    arguments[0].click();    ${element}
-   #JavascriptExecutor executor = (JavascriptExecutor)driver;      
-   #executor.executeScript("arguments[0].click();", ${logout});
+    Mouse Over            ${logout}
+    Click Element           ${logout}
+     sleep   4s 
     #Click Element             ${logout}
     sleep  4s 
     #Execute Javascript    window.open('https://b2b-frontend.dev3.addinn-group.com/dashboard')
