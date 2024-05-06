@@ -56,9 +56,10 @@ Add Operators
   #Wait Until Element Is Visible      xpath=//div[contains(@class, 'd-flex justify-content-end')]//button[contains(text(), 'Add Operator')]      timeout=20s
   #Click Element        xpath=//div[contains(@class, 'd-flex justify-content-end')]//button[contains(text(), 'Add Operator')]
   #Click Element At Coordinates    xpath=//button[@id='mon_bouton']    133.65    43.6
-
-
-   Click Element At Coordinates    //div[contains(@class, 'd-flex justify-content-end')]//button[contains(text(), 'Add Operator')]         133.65    43.6
+  ${x_offset}    Evaluate    round(133.65)
+  ${y_offset}    Evaluate    round(43.6)
+   
+   Click Element At Coordinates    //div[contains(@class, 'd-flex justify-content-end')]//button[contains(text(), 'Add Operator')]        ${x_offset}    ${y_offset}
   # Wait Until Element Is Visible   ${ADDoperators}  
    Sleep  4s
    #Click Element   ${ADDoperators} 
