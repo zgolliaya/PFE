@@ -42,7 +42,7 @@ Add Operators
     Set Window Size    1920    1080  
     sleep   8s 
     Click Element At Coordinates    xpath=//div[contains(@class, 'menu-item')]//a[contains(@routerlink, '/operators')]    100    100
-    Sleep    4s
+    Sleep    2s
    #ADD operators
    #Set Window Size    1920    1080
    #Sleep  8s 
@@ -51,12 +51,13 @@ Add Operators
   #Scroll Element Into View    xpath=//button[contains(text(), 'Add Operator')]
   #Click Element    xpath=//button[contains(text(), 'Add Operator')]
   Set Window Size    1920    1080
-  Scroll Element Into View    xpath=//button[contains(text(), 'Add Operator')]
-  Wait Until Element Is Visible    xpath=//button[contains(text(), 'Add Operator')]    timeout=20s
-  Click Element    xpath=//button[contains(text(), 'Add Operator')]
+  sleep   8s 
+  #Scroll Element Into View    xpath=//button[contains(text(), 'Add Operator')]
+  #Wait Until Element Is Visible    xpath=//button[contains(text(), 'Add Operator')]    timeout=20s
+  #Click Element    xpath=//button[contains(text(), 'Add Operator')]
 
 
-   #Click Element At Coordinates    xpath=//button[contains(text(), 'Add Operator')]         100    100
+   Click Element At Coordinates    //div[contains(@class, 'd-flex justify-content-end')]//button[contains(text(), 'Add Operator')]         100    100
   # Wait Until Element Is Visible   ${ADDoperators}  
    Sleep  4s
    #Click Element   ${ADDoperators} 
