@@ -57,7 +57,7 @@ Add Operators
   #Click Element        xpath=//div[contains(@class, 'd-flex justify-content-end')]//button[contains(text(), 'Add Operator')]
 
 
-   Click Element At Coordinates    //div[contains(@class, 'd-flex justify-content-end')]//button[contains(text(), 'Add Operator')]         50    50
+   Click Element At Coordinates    //div[contains(@class, 'd-flex justify-content-end')]//button[contains(text(), 'Add Operator')]         100    -50
   # Wait Until Element Is Visible   ${ADDoperators}  
    Sleep  4s
    #Click Element   ${ADDoperators} 
