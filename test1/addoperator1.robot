@@ -39,8 +39,8 @@ Add Operators
     sleep      2s 
     Click Element   ${continuebutton}
     sleep      4s  
-    Wait Until Element Is Visible    //span[@class='fs-1 ki-duotone ki-profile-circle ng-star-inserted']/span[@class='path1 ng-star-inserted']
-    Click Element    //span[@class='fs-1 ki-duotone ki-profile-circle ng-star-inserted']/span[@class='path1 ng-star-inserted']
+    Wait Until Element Is Visible          ${logout}
+    Click Element             ${logout}
     sleep  4s 
     #Execute Javascript    window.open('https://b2b-frontend.dev3.addinn-group.com/dashboard')
     #Switch Window   locator=NEW    
