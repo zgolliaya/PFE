@@ -61,7 +61,7 @@ Add Operators
   ${x_offset}    Evaluate    round(133.65)
   ${y_offset}    Evaluate    round(43.6)
    
-   Click Element At Coordinates    //div[contains(@class, 'd-flex justify-content-end')]//button[contains(text(), 'Add Operator')]        ${x_offset}    ${y_offset}
+   Click Element At Coordinates    xpath=//div[contains(@class, 'd-flex justify-content-end')]//button[contains(text(), 'Add Operator')]        ${x_offset}    ${y_offset}
   # Wait Until Element Is Visible   ${ADDoperators}  
    Sleep  4s
    #Click Element   ${ADDoperators} 
