@@ -40,22 +40,15 @@ Add Operators
     Click Element   ${continuebutton}
     sleep      4s  
     Set Window Size    1920    1080  
-    #Wait Until Element Is Visible          ${logout}
-    #Mouse Over            ${logout}
-   # Click Element           ${logout}
-    #${element}=    Get WebElement     //span[contains(@class, 'fs-1 ki-duotone ki-profile-circle ng-star-inserted')]
-    #Click Element    ${element}
-     sleep   4s 
-    #Click Element             ${logout}
-    sleep  4s  
+    sleep   8s 
     Click Element At Coordinates    xpath=//div[contains(@class, 'menu-item')]//a[contains(@routerlink, '/operators')]    100    100
-    Sleep    1s
+    Sleep    4s
    #ADD operators
    Set Window Size    1920    1080
-     Sleep  8s 
+   Sleep  8s 
    Click Element At Coordinates    xpath=//button[contains(text(), 'Add Operator')]         100    100
   # Wait Until Element Is Visible   ${ADDoperators}  
-   Sleep  1s
+   Sleep  4s
    #Click Element   ${ADDoperators} 
    Sleep   1s
    #Profile
