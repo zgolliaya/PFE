@@ -46,10 +46,14 @@ Add Operators
    #ADD operators
    #Set Window Size    1920    1080
    #Sleep  8s 
-   Set Window Size    1920    1080
-  Sleep    10s    # Augmentez le délai d'attente si nécessaire
-  Scroll Element Into View    xpath=//button[contains(text(), 'Add Operator')]
+  # Set Window Size    1920    1080
+  #Sleep    10s    # Augmentez le délai d'attente si nécessaire
+  #Scroll Element Into View    xpath=//button[contains(text(), 'Add Operator')]
+  #Click Element    xpath=//button[contains(text(), 'Add Operator')]
+  Set Window Size    1920    1080
+  Wait Until Element Is Visible    xpath=//button[contains(text(), 'Add Operator')]    timeout=20s
   Click Element    xpath=//button[contains(text(), 'Add Operator')]
+
 
    #Click Element At Coordinates    xpath=//button[contains(text(), 'Add Operator')]         100    100
   # Wait Until Element Is Visible   ${ADDoperators}  
