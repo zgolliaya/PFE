@@ -41,7 +41,9 @@ Add Operators
     sleep      4s  
     Set Window Size    1920    1080  
     sleep   8s 
-    Click Element At Coordinates    xpath=//div[contains(@class, 'menu-item')]//a[contains(@routerlink, '/operators')]    100    100
+     ${x1_offset}    Evaluate    round(231.57)
+     ${y1_offset}    Evaluate    round(38.35)
+    Click Element At Coordinates    xpath=//div[contains(@class, 'menu-item')]//a[contains(@routerlink, '/operators')]      ${x1_offset}      ${y1_offset}
     Sleep    2s
    #ADD operators
    #Set Window Size    1920    1080
