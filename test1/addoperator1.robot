@@ -43,28 +43,12 @@ Add Operators
    # sleep   8s 
      Set Window Size    1920    1080
       Sleep    8s
-     Wait Until Element Is Visible    xpath=//div[@class='card-toolbar']//button[contains(text(), 'Add Operator')]
-     Click Element    xpath=//div[@class='card-toolbar']//button[contains(text(), 'Add Operator')]
-
-    #Click Element At Coordinates    xpath=//div[contains(@class, 'menu-item')]//a[contains(@routerlink, '/operators')]     0    40
+    Click Element At Coordinates    xpath=//div[contains(@class, 'menu-item')]//a[contains(@routerlink, '/operators')]     0    40
     Sleep    2s
    #ADD operators
-   #Set Window Size    1920    1080
-   #Sleep  8s 
-  # Set Window Size    1920    1080
-  #Sleep    10s    # Augmentez le délai d'attente si nécessaire
-  #Scroll Element Into View    xpath=//button[contains(text(), 'Add Operator')]
-  #Click Element    xpath=//button[contains(text(), 'Add Operator')]
-  Set Window Size    1920    1080
-  sleep   8s 
-  #Scroll Element Into View    xpath=//button[contains(text(), 'Add Operator')]
-  #Wait Until Element Is Visible      xpath=//div[@class='card-toolbar']//button[contains(text(), 'Add Operator')]     timeout=20s
-  #Click Element        xpath=//div[@class='card-toolbar']//button[contains(text(), 'Add Operator')]
-  #Click Element At Coordinates    xpath=//button[@id='mon_bouton']    133.65    43.6
- 
-   
-   Click Element At Coordinates    xpath=//div[@class='card-toolbar']//button[contains(text(), 'Add Operator')]       303    27
-  # Wait Until Element Is Visible   ${ADDoperators}  
+    Wait Until Element Is Visible    xpath=//div[@class='card-toolbar']//button[contains(text(), 'Add Operator')]
+    Click Element    xpath=//div[@class='card-toolbar']//button[contains(text(), 'Add Operator')]
+  
    Sleep  4s
    #Click Element   ${ADDoperators} 
    Sleep   1s
