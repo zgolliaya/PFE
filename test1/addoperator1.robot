@@ -42,18 +42,19 @@ Add Operators
     #Wait Until Element Is Visible          ${logout}
     #Mouse Over            ${logout}
    # Click Element           ${logout}
-    ${element}=    Get WebElement     //span[contains(@class, 'fs-1 ki-duotone ki-profile-circle ng-star-inserted')]
-    Click Element    ${element}
+    #${element}=    Get WebElement     //span[contains(@class, 'fs-1 ki-duotone ki-profile-circle ng-star-inserted')]
+    #Click Element    ${element}
 
      sleep   4s 
     #Click Element             ${logout}
     sleep  4s 
     #Execute Javascript    window.open('https://b2b-frontend.dev3.addinn-group.com/dashboard')
     #Switch Window   locator=NEW    
-    #Wait Until Element Is Visible           ${op}
-    #Wait Until Page Contains Element          
-    #Click Element             ${op}
-   # Sleep    1s
+    Wait Until Element Is Visible           ${op}
+    #Wait Until Page Contains Element     
+     ${element}=    Get WebElement       ${op}
+    Click Element             ${op}
+    Sleep    1s
    #ADD operators
    #Wait Until Element Is Visible   ${ADDoperators}  
    #Sleep  1s
