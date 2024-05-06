@@ -50,11 +50,13 @@ Add Operators
     sleep  4s 
     #Execute Javascript    window.open('https://b2b-frontend.dev3.addinn-group.com/dashboard')
     #Switch Window   locator=NEW   
-     Scroll Element Into View             ${op}
-    Wait Until Element Is Visible           ${op}
+    Click Element At Coordinates    xpath=//div[contains(@class, 'menu-item')]//a[contains(@routerlink, '/operators')]    x_offset=100    y_offset=100
+
+    # Scroll Element Into View             ${op}
+    #Wait Until Element Is Visible           ${op}
     #Wait Until Page Contains Element          ${op}
-     ${element}=    Get WebElement       ${op}
-    Click Element             ${op}
+     #${element}=    Get WebElement       ${op}
+    #Click Element             ${op}
     Sleep    1s
    #ADD operators
    #Wait Until Element Is Visible   ${ADDoperators}  
