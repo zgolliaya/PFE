@@ -44,9 +44,14 @@ Add Operators
     Click Element At Coordinates    xpath=//div[contains(@class, 'menu-item')]//a[contains(@routerlink, '/operators')]    100    100
     Sleep    4s
    #ADD operators
+   #Set Window Size    1920    1080
+   #Sleep  8s 
    Set Window Size    1920    1080
-   Sleep  8s 
-   Click Element At Coordinates    xpath=//button[contains(text(), 'Add Operator')]         100    100
+  Sleep    10s    # Augmentez le délai d'attente si nécessaire
+  Scroll Element Into View    xpath=//button[contains(text(), 'Add Operator')]
+  Click Element    xpath=//button[contains(text(), 'Add Operator')]
+
+   #Click Element At Coordinates    xpath=//button[contains(text(), 'Add Operator')]         100    100
   # Wait Until Element Is Visible   ${ADDoperators}  
    Sleep  4s
    #Click Element   ${ADDoperators} 
