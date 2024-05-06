@@ -51,7 +51,7 @@ Add Operators
   #Sleep    10s    # Augmentez le délai d'attente si nécessaire
   #Scroll Element Into View    xpath=//button[contains(text(), 'Add Operator')]
   #Click Element    xpath=//button[contains(text(), 'Add Operator')]
-  Set Window Size    800    600
+  Set Window Size    1920    1080
   sleep   8s 
   #Scroll Element Into View    xpath=//button[contains(text(), 'Add Operator')]
   #Wait Until Element Is Visible      xpath=//div[@class='card-toolbar']//button[contains(text(), 'Add Operator')]     timeout=20s
