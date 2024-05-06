@@ -59,7 +59,7 @@ Add Operators
   #Click Element At Coordinates    xpath=//button[@id='mon_bouton']    133.65    43.6
  
    
-   Click Element At Coordinates    xpath=//div[@class='card-toolbar']//button[contains(text(), 'Add Operator')]       303    27
+   Click Element At Coordinates    xpath=//div[@class='card-toolbar']//button[contains(text(), 'Add Operator')]       322    27
   # Wait Until Element Is Visible   ${ADDoperators}  
    Sleep  4s
    #Click Element   ${ADDoperators} 
