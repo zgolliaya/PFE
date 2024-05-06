@@ -50,8 +50,8 @@ Add Operators
     sleep  4s 
     #Execute Javascript    window.open('https://b2b-frontend.dev3.addinn-group.com/dashboard')
     #Switch Window   locator=NEW    
-    Wait Until Element Is Visible           ${op}
-    #Wait Until Page Contains Element     
+    #Wait Until Element Is Visible           ${op}
+    Wait Until Page Contains Element          ${op}
      ${element}=    Get WebElement       ${op}
     Click Element             ${op}
     Sleep    1s
