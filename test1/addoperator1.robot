@@ -55,13 +55,12 @@ Add Operators
   Set Window Size    1920    1080
   sleep   8s 
   #Scroll Element Into View    xpath=//button[contains(text(), 'Add Operator')]
-  Wait Until Element Is Visible      xpath=//div[@class='card-toolbar']//button[contains(text(), 'Add Operator')]     timeout=20s
-  Click Element        xpath=//div[@class='card-toolbar']//button[contains(text(), 'Add Operator')]
+  #Wait Until Element Is Visible      xpath=//div[@class='card-toolbar']//button[contains(text(), 'Add Operator')]     timeout=20s
+  #Click Element        xpath=//div[@class='card-toolbar']//button[contains(text(), 'Add Operator')]
   #Click Element At Coordinates    xpath=//button[@id='mon_bouton']    133.65    43.6
- # ${x_offset}    Evaluate    round(133.65)
-  #${y_offset}    Evaluate    round(43.6)
+ 
    
-  # Click Element At Coordinates    xpath=//div[@class='card-toolbar']//button[contains(text(), 'Add Operator')]       ${x_offset}    ${y_offset}
+   Click Element At Coordinates    xpath=//div[@class='card-toolbar']//button[contains(text(), 'Add Operator')]       303    27
   # Wait Until Element Is Visible   ${ADDoperators}  
    Sleep  4s
    #Click Element   ${ADDoperators} 
