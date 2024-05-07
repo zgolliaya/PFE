@@ -42,7 +42,9 @@ Add Operators
     #Set Window Size    1920    1080  
    # sleep   8s 
      Set Window Size    1920    1080
-      Sleep    8s
+     # Sleep    8s
+      Sleep    10s
+      sleep   5s 
     Click Element    xpath=//div[contains(@class, 'menu-item')]//a[contains(@routerlink, '/operators')]    
     Sleep    2s
    #ADD operators
