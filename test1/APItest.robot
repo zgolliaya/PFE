@@ -41,11 +41,11 @@ Get_all
    Log To Console    ${resp.content}  
    Log To Console   ${resp.status_code}
    
-PUT_sendcommande
-   ${header}=  Create dictionary  Content-Type=application/json  accept=*/*
-   ${body}=  create dictionary   deviceId= 0    command= open   command= close    raison= string
-   Create Session    mysession1  ${base_url}  headers=${header}  verify=${True}
-   ${response1}=  PUT On Session   mysession1   ${loginop}   json=${body}    headers=${header}
-   log To Console    ${response1.status_code}
-   Log To Console    ${response1.content}
+#PUT_sendcommande
+   #${header}=  Create dictionary  Content-Type=application/json  accept=*/*
+   #${body}=  create dictionary   deviceId= 0    command= open   command= close    raison= string
+   #Create Session    mysession1  ${base_url}  headers=${header}  verify=${True}
+   #${response1}=  PUT On Session   mysession1   ${loginop}   json=${body}    headers=${header}
+   #log To Console    ${response1.status_code}
+   #Log To Console    ${response1.content}
   
