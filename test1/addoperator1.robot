@@ -33,9 +33,9 @@ Add Operators
     Open Browser  ${LOGIN_URL}    Chrome     options=${options}
     Maximize Browser Window
     sleep      2s 
-    Input Text    ${usernamexpath}   ${USERNAME}
+    Input Text    ${usernamexpath}   Admin
     sleep      2s 
-    Input Password    ${passwordxpath}   ${PASSWORD}
+    Input Password    ${passwordxpath}   Admin123
     sleep      2s 
     Click Element   ${continuebutton}
     sleep      4s  
@@ -43,7 +43,7 @@ Add Operators
    # sleep   8s 
      Set Window Size    1920    1080
       Sleep    8s
-    Click Element At Coordinates    xpath=//div[contains(@class, 'menu-item')]//a[contains(@routerlink, '/operators')]     0    40
+    Click Element    xpath=//div[contains(@class, 'menu-item')]//a[contains(@routerlink, '/operators')]    
     Sleep    2s
    #ADD operators
     Wait Until Element Is Visible    xpath=//div[@class='card-toolbar']//button[contains(text(), 'Add Operator')]
@@ -63,7 +63,7 @@ Add Operators
    Sleep  1s
   Input Password   ${repeatpassop}  ${REPEATPASSWORD}
   Sleep  1s
-  Carpark & Features
+  #Carpark & Features
   Wait Until Element Is Visible   ${CarparkFeaturesop}
   Click Element   ${CarparkFeaturesop}
   Sleep  1s
