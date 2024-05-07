@@ -68,7 +68,7 @@ Add Operators
   #Carpark & Features
   Wait Until Element Is Visible   ${CarparkFeaturesop}
   Click Element   ${CarparkFeaturesop}
-  Sleep  1s
+  Sleep  10s
   #CarPark
   Click Element   ${carparkop}
   Sleep  1s
