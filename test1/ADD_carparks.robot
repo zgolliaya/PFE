@@ -3,14 +3,14 @@ Library    SeleniumLibrary
 Resource    login.robot
 variables     ${CURDIR}/lacators.py
 *** Variables ***
-${Carpark Name}      Qpark
-${Operator ID}      5674
-${ZR ID}            28
-${Password}         az12*-
-${IP ADDRESS }      192.168.23.4 
-${Port}        80
-${Cashier Consumer ID }       7685
-${Cashier Contract ID }      4599
+${Carpark Name}         Qpark
+${Operator ID}          5674
+${ZR ID}                  30
+${Password}             az12*-
+${IP ADDRESS }          192.168.23.4 
+${Port}              80
+${Cashier Consumer ID }            7685
+${Cashier Contract ID }           4599
 *** Keywords ***
 Add carparks 
  #carparks
