@@ -18,7 +18,7 @@ addoperatortest
      [tags]     addop
      Set Selenium Timeout    20s
      sleep  10s
-    Add Operators   ${first_name}    ${last_name}    ${username1}    ${password1}    ${REPEATPASSWORD}    ${Contract}   ${CONSUMER}    ${ashierPassword}  
+    Add Operators   ${first_name}    ${last_name}    ${username1}    ${PASSWORDOP1}    ${REPEATPASSWORD}    ${Contract}   ${CONSUMER}    ${ashierPassword}  
     sleep    5s
 addcarparkstest
     [tags]  carparks
