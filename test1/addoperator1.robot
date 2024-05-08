@@ -20,9 +20,9 @@ Add Operators
   Click Element    ${Operatorsbutton}   
   Sleep    1s
   #ADD operators
-  Wait Until Element Is Visible   ${ADDoperators}  
+  Wait Until Element Is Visible   ${addoperators}  
   Sleep  1s
-  Click Element   ${ADDoperators} 
+  Click Element   ${addoperators} 
   Sleep   1s
   #Profile
   Input Text    ${firstnameop}   ${FIRSTNAME}
