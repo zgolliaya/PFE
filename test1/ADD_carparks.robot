@@ -5,7 +5,7 @@ variables     ${CURDIR}/lacators.py
 *** Variables ***
 ${Carpark Name}         Qpark
 ${Operator ID}          5674
-${ZR ID}                  30
+${ZR ID}                  31
 ${Password}             az12*-
 ${IP ADDRESS }          192.168.23.4 
 ${Port}              80
