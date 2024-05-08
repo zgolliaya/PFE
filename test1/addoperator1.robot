@@ -16,7 +16,9 @@ ${ashierPassword} =     4711
 Add Operators
   [Arguments]    ${first_name}    ${last_name}    ${username1}    ${PASSWORDOP1}    ${REPEATPASSWORDOP1}    ${Contract}   ${CONSUMER}    ${ashierPassword}  
   #Operators
-  Wait Until Element Is Visible     ${Operatorsbutton}               15s
+  Set Window Size    1920    1080
+  #Wait Until Element Is Visible     ${Operatorsbutton}               15s
+  Sleep   15s
   Click Element    ${Operatorsbutton}   
   Sleep    1s
   #ADD operators
