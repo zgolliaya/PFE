@@ -7,8 +7,8 @@ variables  ${CURDIR}/lacators.py
 ${first_name}=  Aya
 ${last_name}=    Zgolli
 ${username1}=    AyaZG
-${password}=     123ZAAA
-${REPEATPASSWORD} =    123ZAAA   
+${PASSWORDOP1}=     123ZAAA
+${REPEATPASSWORDOP1} =    123ZAAA   
 ${Contract} =  1
 ${CONSUMER} =  205
 ${ashierPassword} =     4711
@@ -31,9 +31,9 @@ Add Operators
   Sleep  1s
   Input Text    ${usernameop}   ${username1}
   Sleep  1s
-  Input Password  ${Passwordop}       ${PASSWORD}
+  Input Password  ${Passwordop}           ${PASSWORDOP1}
   Sleep  1s
-  Input Password   ${repeatpassop}      ${REPEATPASSWORD}
+  Input Password   ${repeatpassop}        ${REPEATPASSWORDOP1}
   Sleep  1s
   #Carpark & Features
   Wait Until Element Is Visible   ${CarparkFeaturesop}
