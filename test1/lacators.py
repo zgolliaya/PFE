@@ -6,6 +6,7 @@ logout="xpath=//span[@class='fs-1 ki-duotone ki-profile-circle ng-star-inserted'
 #ADD operator
 fleche="xpath=//div[contains(@class, 'app-sidebar-toggle')]"
 op="xpath=//div[contains(@class, 'menu-item')]//a[contains(@routerlink, '/operators')]"
+Operatorsbutton="xpath=//div[contains(@class, 'menu-item')]//a[contains(@routerlink, '/operators')]" 
 addoperators=" xpath=//button[contains(text(), 'Add Operator')]"
 firstnameop="xpath=//input[@formcontrolname='firstname'] "
 lastnameop="xpath=//input[@formcontrolname='lastname'] "
