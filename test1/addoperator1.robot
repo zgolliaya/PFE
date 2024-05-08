@@ -14,7 +14,7 @@ ${CONSUMER} =  205
 ${ashierPassword} =     4711
 *** Keywords ***
 Add Operators
-  [Arguments]    ${first_name}    ${last_name}    ${username1}    ${password}    ${REPEATPASSWORD}    ${Contract}   ${CONSUMER}    ${ashierPassword}  
+  [Arguments]    ${first_name}    ${last_name}    ${username1}    ${PASSWORDOP1}    ${REPEATPASSWORD}    ${Contract}   ${CONSUMER}    ${ashierPassword}  
   #Operators
   Wait Until Element Is Visible     ${Operatorsbutton}           
   Click Element    ${Operatorsbutton}   
