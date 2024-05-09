@@ -18,7 +18,7 @@ Add Operators
   #Operators
   Set Window Size    1920    1080
   #Wait Until Element Is Visible     ${Operatorsbutton}               15s
-  Sleep   15s
+  Sleep   20s
   Click Element    ${Operatorsbutton}   
   Sleep    1s
   #ADD operators
